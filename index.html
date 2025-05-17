@@ -5,112 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Luisa Sonza</title>
     <link rel="icon" href="favicon.ico">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
+   <style>
+    * {
+        box-sizing: border-box;
+    }
 
-        header {
-            background-color: #6a1b9a;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+    header {
+        background-color: #6a1b9a;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        display: none;
+    }
+
+    section:target {
+        display: block;
+    }
+
+    section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    section h1,
+    section h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    section p {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 0 10px;
+    }
+
+    #carteirinha-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #carteirinha-form label,
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #carteirinha-form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    #carteirinha-form button {
+        padding: 12px 20px;
+        background-color: #6a1b9a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    #carteirinha-form button:hover {
+        background-color: #4a148c;
+    }
+
+    #result {
+        text-align: center;
+        display: none;
+        margin-top: 20px;
+    }
+
+    #result img {
+        width: 90%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.6em;
         }
 
         nav a {
-            color: #fff;
-            text-decoration: none;
+            font-size: 1em;
         }
 
-        main {
-            padding: 20px;
-        }
-
-        section {
-            display: none;
-        }
-
-        section:target {
-            display: block;
-        }
-
-        section img {
-            max-width: 100%;
-            border-radius: 10px;
-            display: block;
-            margin: 20px auto;
-        }
-
-        section h1, section h2 {
-            text-align: center;
+        section h1,
+        section h2 {
+            font-size: 1.5em;
         }
 
         section p {
-            max-width: 800px;
-            margin: 0 auto 20px;
-            font-size: 16px;
-            text-align: justify;
+            font-size: 1em;
         }
 
         #carteirinha-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 0 auto;
+            width: 90%;
         }
-
-        #carteirinha-form label, input {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        #carteirinha-form input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        #carteirinha-form button {
-            padding: 10px 20px;
-            background-color: #6a1b9a;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #carteirinha-form button:hover {
-            background-color: #4a148c;
-        }
-
-        #result {
-            text-align: center;
-            display: none;
-            margin-top: 20px;
-        }
-
-        #result img {
-            width: 50%;
-            border-radius: 10px;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
