@@ -53,14 +53,22 @@
     margin: 20px auto;
   }
 
- #ballet img {
-  width: 70%;
-  max-width: 400px;
-  margin: 10px auto;
+#ballet img {
+  width: 100%;
+  height: auto;
+  max-width: 768px;
+  border-radius: 10px;
   display: block;
+  margin: 20px auto;
 }
 
 @media (max-width: 768px) {
+  #ballet img {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
   #ballet img {
     width: 95vw;
   }
