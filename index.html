@@ -10,373 +10,318 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #ffffff;
         }
-        
+
         header {
-            background-color: #333;
+            background-color: #6a1b9a;
             color: #fff;
             padding: 1em;
             text-align: center;
         }
-        
+
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
         }
-        
-        nav li {
-            margin-right: 20px;
-        }
-        
+
         nav a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         main {
             padding: 20px;
         }
-        
+
         section {
             display: none;
         }
-        
+
         section:target {
             display: block;
+        }
+
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        section h1, section h2 {
+            text-align: center;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        #carteirinha-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #carteirinha-form label, input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #carteirinha-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #carteirinha-form button {
+            padding: 10px 20px;
+            background-color: #6a1b9a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #carteirinha-form button:hover {
+            background-color: #4a148c;
+        }
+
+        #result {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+
+        #result img {
+            width: 50%;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#introducao">Introdução</a></li>
-                    <li><a href="#carreira">Carreira</a></li>
-                    <li><a href="#show">Show</a></li>
-                    <li><a href="#ballet">Ballet</a></li>
-                    <li><a href="#carteirinha">Carteirinha</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <head>
-                <style>
-                    #introducao {
-                        text-align: center;
-                    }
-                    
-                    #introducao img {
-                        width: 40%;
-                        margin: 20px auto;
-                        border-radius: 10px;
-                    }
-                    
-                    #introducao p {
-                        text-align: justify;
-                        font-size: 16px;
-                        margin-bottom: 20px;
-                    }
-                </style>
-            </head>
-            
-            <body>
-                <section id="introducao">
-                    <h1>Bem-vindos ao Universo Luisa Sonza, Sonzers!</h1>
-                    <img src="https://i.pinimg.com/736x/64/48/2f/64482f1973d4a4c849636195d204c1c5.jpg" alt="Introdução" style="width: 40%; margin: 0 auto; display: block;">
-                    <p>Bem-vindos, Sonzers! Esse espaço foi criado com muito amor pra vocês que acompanham cada passo, cada nota, cada conquista.
-                        Aos Sonzers raiz, que estavam lá desde os covers no YouTube, que viram “Braba” nascer e que vibraram
-                        com cada fase, essa história também é de vocês. E aos Sonzers que estão chegando agora, se sintam em
-                        casa! Aqui tem espaço pra todo mundo que acredita no poder da música, da liberdade e da entrega.
-                        Navegue pelas abas, conheça mais sobre a carreira da Lu, os shows inesquecíveis, o ballet que dá vida
-                        no palco e muito mais. Esse site é nosso ponto de encontro. Sejam bem-vindos à era do amor, da força
-                        e da verdade. Sejam bem-vindos à nossa história.</p>
-                </section>
-            </body>
-            </section>
-            <head>
-                <style>
-                    #carreira {
-                        text-align: center;
-                    }
-                    
-                    #carreira img {
-                        width: 80%;
-                        margin: 20px auto;
-                        border-radius: 10px;
-                    }
-                    
-                    #carreira p {
-                        text-align: justify;
-                        font-size: 16px;
-                        margin-bottom: 20px;
-                    }
-                    
-                    #carreira h2 {
-                        font-size: 24px;
-                        margin-bottom: 10px;
-                    }
-                </style>
-            </head>
-            <body>
-            <section id="carreira">
-                <h1>Carreira da Luisa</h1>
-                <img src="https://i.pinimg.com/736x/b6/18/0f/b6180ff1fee13eee6f520dff01bf44e2.jpg" alt="Carreira" style="width: 40%; margin: 0 auto; display: block;">
-                
-                <h2>Início da Carreira</h2>
-                <img src="https://i.pinimg.com/736x/a8/c3/32/a8c3327c0e3bc10eb31907fd476e8c78.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Luísa Gerloff Sonza, mais conhecida como Luísa Sonza, nasceu em Tuparendi, no interior do
-                    Rio Grande do Sul, e desde pequena já demonstrava sua conexão com a música. Aos 7 anos, começou a cantar na
-                   banda Sol Maior, apresentando-se em eventos diversos, desde casamentos até velórios, o que mostra como sua
-                   trajetória artística começou de forma humilde e determinada. Com o tempo, Luísa passou a publicar vídeos
-                   de covers no YouTube, onde conquistou visibilidade por sua potência vocal e carisma. Sua primeira música
-                   autoral foi Good Vibes, mas foi com Rebolar que ela ganhou destaque no cenário musical nacional.
-                   Curiosamente, hoje em dia, Luísa não gosta dessa música e afirma que, com a maturidade artística que
-                   adquiriu, jamais lançaria algo assim novamente. Apesar disso, a faixa continua sendo uma das queridinhas
-                   dos fãs, que sempre pedem para ela cantá-la nos shows, e ela leva tudo com bom humor, brincando com o
-                   público sobre isso.</p>
+    <header>
+        <h1>Universo Luisa Sonza</h1>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#carreira">Carreira</a></li>
+                <li><a href="#show">Show</a></li>
+                <li><a href="#ballet">Ballet</a></li>
+                <li><a href="#carteirinha">Carteirinha</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <h2>Relacionamento com Whindersson Nunes</h2>
-                <img src="https://i.pinimg.com/736x/9d/b5/f0/9db5f09fe29e7af8356ba3458297bcf4.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>O humorista Whindersson Nunes conheceu a Luisa através de seus vídeos de covers no YouTube, e os dois
-                    começaram a namorar em 2016. O relacionamento evoluiu rapidamente: dois meses depois, já estavam
-                    morando juntos. No dia 28 de fevereiro de 2018, eles se casaram em uma cerimônia celebrada com grande
-                    repercussão na mídia. Durante o relacionamento, Luísa compôs Olhos Castanhos como uma homenagem a ele.
-                    Apesar da sintonia aparente, o casal anunciou o término no dia 29 de abril de 2020. Durante a relação,
-                    Luísa foi alvo de críticas, piadas ofensivas e comentários machistas, que a colocavam em uma posição
-                    injusta, como se não fosse “boa o suficiente” para Whindersson. Ela era sexualizada e julgada pelo seu
-                    estilo, suas roupas e sua performance artística, algo que a afetou profundamente.</p>
-                
-                <h2>Ataques nas Redes Sociais Pós-Término</h2>
-                <img src="https://i.pinimg.com/736x/3d/64/2e/3d642ee13806392ce3092ed3a9ccb403.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Após o término, Luísa enfrentou uma nova onda de ataques virtuais ainda mais pesados. Muitos passaram
-                    a acusá-la injustamente de traição, mesmo sem qualquer prova especialmente após ela assumir um novo
-                    relacionamento meses depois. Alguns até diziam que ela só havia se casado com Whindersson “por fama”,
-                    ignorando completamente seu talento e trajetória. Durante o luto de Whindersson e sua então noiva
-                    Maria Lina, que perderam o filho, pessoas chegaram ao ponto de culpar Luísa de forma cruel e desumana.
-                    Ela foi vítima de misoginia, ameaças de morte e teve que desativar os comentários em suas redes sociais.
-                    Em entrevistas, revelou ter desenvolvido crises de ansiedade, depressão e pânico em decorrência desse
-                    período sombrio. Foi um momento decisivo que a fez dar uma pausa em tudo para cuidar de si.</p>
-                
-                <h2>Namoro com Vitão</h2>
-                <img src="https://i.pinimg.com/736x/b8/43/dd/b843dd7c0b3a3c5348ef13bbeca2897e.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Meses após o término com Whindersson, Luísa assumiu o relacionamento com o cantor Vitão. A internet
-                    reagiu com extrema hostilidade: surgiram rumores de que Vitão teria sido o "pivô" da separação, o que ambos
-                    sempre negaram. O relacionamento foi marcado por muito hate, e enquanto Vitão também sofreu críticas,
-                    a carga emocional recaiu majoritariamente sobre Luísa. Ela foi novamente chamada de “infiel” e “interesseira”.
-                    Mesmo assim, o casal tentou manter o romance de forma leve e respeitosa até o fim do relacionamento,
-                    que terminou sem escândalos, mas com uma lição importante sobre como o machismo estrutural age nas
-                    redes sociais.</p>
-                
-                <h2>Era Doce22 e Seus Recordes</h2>
-                <img src="https://i.pinimg.com/736x/4f/17/3e/4f173e53e44c9cb8bec362effc8ed277.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Após viver uma fase difícil, Luísa renasceu musicalmente com o álbum Doce22, lançado em 18 de julho de 2021, 
-                    esse álbum era para ser lançado antes, mas devido aos ataques constantes de morte ela adiou e foi ao México
-                    para tentar se curar um pouco, e após voltar de viagem ela lança o Doce22. O projeto é considerado um 
-                    divisor de águas em sua carreira, com faixas confessionais que exploram a dor, os traumas e a força de
-                    seguir em frente. Doce22 bateu recordes: foi a maior estreia semanal da história do Spotify Brasil, 
-                    com 29,8 milhões de streams; alcançou 4,1 milhões de reproduções nas primeiras 24 horas; recebeu certificação
-                    de Duplo Diamante; e ultrapassou a marca de 1 bilhão de streams em janeiro de 2022. Além disso, foi indicado
-                    ao Grammy Latino como Melhor Álbum Pop Contemporâneo em Língua Portuguesa. Essa era consolidou Luísa como
-                    uma artista pop de relevância internacional.</p>
-                
-                <h2>Relacionamento com Chico Moedas</h2>
-                <img src="https://i.pinimg.com/736x/12/6b/f1/126bf1eab804331ad691d5fc8ee6ed9c.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Em 2023, Luísa começou um relacionamento com Chico Moedas, um influenciador digital.
-                    O namoro durou cerca de dois meses e teve um fim conturbado após uma traição por parte dele.
-                    O caso aconteceu no banheiro do Bar da Cachaça, no Rio de Janeiro, local que é inclusive mencionado
-                    na música Chico, uma das faixas de destaque do álbum Escândalo Íntimo. No dia seguinte à descoberta da
-                    traição, Luísa fez um pronunciamento ao vivo no programa da Ana Maria Braga, lendo uma carta aberta
-                    comovente e firme, encerrando publicamente a relação. O episódio gerou uma comoção nacional e
-                    reafirmou o quanto Luísa tem usado sua vulnerabilidade como uma arma de empoderamento.</p>
-                
-                <h2>Era Escândalo Íntimo e Seus Recordes</h2>
-                <img src="https://i.pinimg.com/736x/b9/83/19/b98319b405af295dfe0a833ec2d98eff.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Escândalo Íntimo, lançado em 29 de agosto de 2023, marcou uma nova fase na carreira de Luísa.
-                    Anunciado de forma impactante com um outdoor na Rodovia Régis Bittencourt, o álbum foi criado entre
-                    São Paulo e Los Angeles em apenas 8 meses. Mais uma vez, Luísa bateu recordes: 15,6 milhões de streams
-                    nas primeiras 24 horas (a maior estreia da história do Spotify Brasil), seis músicas simultaneamente
-                    no Top 10 nacional, e destaque internacional, ficando entre as maiores estreias latinas no Spotify.
-                    A faixa Penhasco2, em parceria com Demi Lovato, quebrou barreiras ao alcançar 2 milhões de streams em
-                    um dia. O álbum também rendeu uma nova indicação ao Grammy Latino. Escândalo Íntimo não é só sucesso
-                    comercial é profundidade emocional, ousadia estética e maturidade artística.</p>
-                
-                <h2>Documentário “Se Eu Fosse Luísa Sonza”</h2>
-                <img src="https://i.pinimg.com/736x/96/be/b3/96beb33d44336e6d05a3b8c5f1567fbb.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>O documentário, lançado em parceria com a Netflix, é um mergulho íntimo na vida e na mente de Luísa.
-                    Nele, a artista narra sua trajetória, traumas, medos e conquistas. Ela fala abertamente sobre
-                    suas crises de ansiedade, depressão, ataques de pânico e o peso de ser uma mulher forte e exposta
-                    em um país ainda profundamente machista. Também mostra os bastidores da criação de seus álbuns
-                    e da sua transformação pessoal. O documentário emociona, inspira e oferece uma nova dimensão
-                    sobre quem é, de fato, Luísa Sonza além dos palcos.</p>
-                
-                <h2>Relacionamento com Luís Ribeirinho</h2>
-                <img src="https://i.pinimg.com/736x/aa/b1/90/aab190398f9c54b02d33317272cf4145.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Atualmente, Luísa vive um relacionamento mais reservado com o cirurgião plástico português
-                    Luís Ribeirinho. Diferente dos anteriores, ela tem optado por manter esse relacionamento mais
-                    discreto, longe dos holofotes e das redes sociais. Luís é conhecido por seu profissionalismo e
-                    discrição, o que tem proporcionado a Luísa um espaço de paz e estabilidade. Os dois foram vistos
-                    juntos em viagens e eventos, e ela já deu indícios de que está feliz, mas não expõe muito talvez
-                    como forma de preservar sua saúde mental e seu bem-estar. Esse relacionamento marca uma nova
-                    postura de Luísa sobre sua vida pessoal: menos exposição, mais equilíbrio.</p>
-                
-                <h2>LS4</h2>
-                <img src="https://i.pinimg.com/736x/13/8f/05/138f05ed9ae9252aa74eed8e6041ed91.jpg" alt="Carreira" style="width: 80%; margin: 0 auto; display: block;">
-                <p>Com dois álbuns históricos na bagagem, Luísa já confirmou que o LS4 está em desenvolvimento
-                    e promete ser ainda mais ousado. Previsto para 2026, o próximo projeto deve trazer uma mistura de
-                    sonoridades, letras profundas, coreografias impactantes e participações especiais tanto nacionais
-                    quanto internacionais. Os fãs já estão ansiosos, e Luísa deixa claro que esse próximo trabalho será
-                    mais uma afirmação da sua identidade artística. Ela não tem medo de se reinventar e promete entregar
-                    mais uma vez um álbum que será divisor de águas no pop brasileiro.</p>
-            </section>
-            <head>
-                <style>
-               .show-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .show {
-            margin: 20px;
-            width: 80%;
-            text-align: center;
-        }
-        
-        .show img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 10px;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        .show h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .show p {
-            text-align: justify;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-                </style>
-            </head>
-            <body>
-                <section id="show">
-                    <h1>Show da Luisa</h1>
-                    <img src="https://i.pinimg.com/736x/15/6c/29/156c2956efd7abebeb6e758de3a6a782.jpg" alt="Sobre" style="width: 50%; margin: 0 auto; display: block;">
-                    <p>Luisa Sonza tem conquistado os palcos de todo o Brasil e do mundo com suas apresentações inesquecíveis.
-                        Com sua presença de palco única e um repertório que mistura poder, emoção e diversão, Luísa transforma
-                        cada show em uma experiência imersiva. Seja com hits de sucesso ou novas surpresas para o público,
-                        seus concertos são uma celebração do talento, da força feminina e da conexão com seus fãs. Explore aqui top 5 shows
-                        da nossa amada loirinha e de suas performances mais marcantes.</p>
-                <h1>Top 5 Melhores Shows da Luisa</h1>
-                    <div class="show-container">
-                        <div class="show">
-                            <h2>1 Rock in Rio 2024</h2>
-                            <img src="https://media.gettyimages.com/id/2173052601/pt/foto/brazilian-singer-luisa-sonza-performs-during-the-rock-in-rio-music-festival-in-the-rio-2016.jpg?s=612x612&w=0&k=20&c=ZPKfkii1B-dWDStQmMOzlLV_NfZCiRlgqo6_M81U3yk=" alt="Rock in Rio 2024" style="width: 50%; margin: 10px auto; display: block;">
-                            <p style="text-align: justify;">Esse foi sem dúvidas o melhor show da Luisa, ela abriu o palco mundo,
-                            no qual é o palco principal do Rock in Rio, com o total de 115 mil pessoas. Foi nesse momento que deu início
-                            à nova era do Escândalo Íntimo, com músicas inéditas do deluxe, novas apresentações e coreografias repaginadas.
-                            A estética do show chamou atenção: figurinos impactantes, cenário grandioso e projeções dramáticas criaram uma
-                            atmosfera intensa, digna da narrativa do álbum. Luísa também emocionou o público com homenagens ao Rio Grande do Sul,
-                            misturando pop com tradição gaúcha. Ela se entregou por completo, emocionando os fãs com sua conexão verdadeira e
-                            presença de palco arrebatadora. O show foi celebrado como histórico pela mídia, e nas redes,
-                            o público só confirmou: Luísa fez história no maior festival do país.</p>
-                        </div>
-                        <div class="show">
-                            <h2>2 Lollapalooza 2024 </h2>
-                            <img src="https://i.pinimg.com/736x/b8/fb/d3/b8fbd39229de9032e3fccda8b45498e8.jpg" alt="Lollapalooza 2024" style="width: 50%; margin: 10px auto; display: block;">
-                            <p style="text-align: justify;">O show da Luísa Sonza no Lollapalooza 2024 foi marcante por representar
-                                mais uma virada artística em sua carreira. Mesmo fora do palco principal, ela entregou uma performance
-                                conceitual com estética country-pop e figurino de cowgirl, iniciando uma nova fase da era
-                                Escândalo Íntimo com releituras criativas. Ela também emocionou ao homenagear Marília Mendonça, reforçando
-                                sua conexão com outras grandes vozes femininas. Apesar dos problemas técnicos no início, conquistou o público
-                                com carisma, entrega e emoção. Foi um show que revelou uma Luísa mais madura e ousada, provando que não
-                                precisa de grandes estruturas para brilhar e que ela é sim o espetáculo.</p>
-                        </div>
-                        <div class="show">
-                            <h2>3 Rock in Rio 2022</h2>
-                            <img src="https://i.pinimg.com/736x/17/df/c8/17dfc818e8a9c71f54aeca6bc556a9f1.jpg" alt="Rock in Rio 2022" style="width: 50%; margin: 10px auto; display: block;">
-                            <p style="text-align: justify;">O show da Luísa Sonza no Rock in Rio 2022 foi marcante por ser a sua primeira
-                                vez no festival. Ela se apresentou no Palco Sunset, trazendo uma energia contagiante e uma presença de
-                                palco impressionante. Com hits como “Modo Turbo” e “Anaconda”, Luísa conquistou o público e se destacou
-                                com sua performance cheia de atitude. A homenagem emocionante a Marília Mendonça também foi um dos momentos
-                                mais marcantes, demonstrando respeito e carinho pela música brasileira. Luísa se firmou como uma das
-                                principais artistas pop do Brasil, provando que tem o poder de brilhar, seja em palcos grandes ou intimistas,
-                                com uma performance memorável.</p>
-                        </div>
-                        <div class="show">
-                            <h2>4 Rock in Rio Lisboa 2024</h2>
-                            <img src="https://i.pinimg.com/736x/60/25/3e/60253e24adc01dca2e3b19d6e5e8f465.jpg" alt="Rock in Rio Lisboa 2024" style="width: 50%; margin: 10px auto; display: block;">
-                            <p style="text-align: justify;">O show da Luísa Sonza no Rock in Rio Lisboa 2024 foi marcante por consolidar sua
-                                presença internacional. Com uma performance cheia de energia no Palco Galp, ela atraiu cerca de
-                                80 mil pessoas, superando até artistas como Camila Cabello e Doja Cat. A apresentação, que celebrou o
-                                álbum Escândalo Íntimo com sucessos como “Sagrado Profano” e “Penhasco2”, emocionou o público.
-                                Sua estreia no festival foi histórica, reforçando a sua posição como uma das principais artistas
-                                pop brasileiras e ampliando seu reconhecimento global.</p>
-                        </div>
-                        <div class="show">
-                            <h2>5 Salve o Sul</h2>
-                            <img src="https://i.pinimg.com/736x/42/a7/e7/42a7e7c75dd17a1e2ba9edf760fae979.jpg" alt="Salve o Sul" style="width: 50%; margin: 10px auto; display: block;">
-                            <p style="text-align: justify;">Esse foi um show super especial, pois o Rio Grande do Sul cidade natal
-                                da Luisa, estava vivendo sua pior catástrofe estava tendo tempos de chuvas e a cidade ficou inundada
-                                e ficou de baixo d'água, e para arrecadar comida, bebida ou até mesmo dinheiro Luisa e Pedro Sampaio
-                                juntaram diversos artistas em um só festival para dois dias cheios de músicas, mais pensando na boa ação para ajudar sua cidade natal, o vestival
-                                contou com dois dias um deles teria Leonardo, Zezé Di Camargo e Luciano, Chitãozinho e Xororó mas conhecidos como
-                                amigos, e em outro dia diversos outros artistas como por exemplo Lexa, Grupo Menos é Mais, Pocah,
-                                Duda Beat entre outros artistas. E o festival arrecadou cerca de 8,2 milhões com a venda de ingressos e
-                                esse valor foi destinado às vítimas da tragédia do Rio Grande do Sul.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <head>
-                    <style>
-                        #ballet {
-                            text-align: center;
-                        }
-                        
-                        #ballet img {
-                            width: 50%;
-                            margin: 20px auto;
-                            border-radius: 10px;
-                        }
-                        
-                        #ballet p {
-                            text-align: justify;
-                            font-size: 16px;
-                            margin-bottom: 20px;
-                        }
-                        
-                        #ballet h2 {
-                            font-size: 24px;
-                            margin-bottom: 10px;
-                        }
-                        
-                        .bailarina {
-                            margin-bottom: 40px;
-                        }
-                        
-                        .bailarina img {
-                            width: 20%;
-                            margin: 10px auto;
-                            border-radius: 50%;
-                        }
-                    </style>
-                </head>
-            </body>
-            </section>
-            <section id="ballet">
-                <h1>Ballet</h1>
-                <img src="https://i.pinimg.com/736x/dd/12/e0/dd12e002246de8c9f6e01fe9f3f29de6.jpg" alt="Ballet" style="width: 50%; margin: 0 auto; display: block;">
-                <h1>Bem-vindo a Creche da Sonza!</h1>
+    <main>
+        <section id="introducao">
+            <h1>Bem-vindos ao Universo Luisa Sonza, Sonzers!</h1>
+            <img src="https://i.pinimg.com/736x/64/48/2f/64482f1973d4a4c849636195d204c1c5.jpg" alt="Luisa Sonza">
+            <p>Bem-vindos, Sonzers! Esse espaço foi criado com muito amor pra vocês que acompanham cada passo, cada nota, cada conquista.
+                Aos Sonzers raiz, que estavam lá desde os covers no YouTube, que viram “Braba” nascer e que vibraram
+                com cada fase, essa história também é de vocês. E aos Sonzers que estão chegando agora, se sintam em
+                casa! Aqui tem espaço pra todo mundo que acredita no poder da música, da liberdade e da entrega.
+                Navegue pelas abas, conheça mais sobre a carreira da Lu, os shows inesquecíveis, o ballet que dá vida
+                no palco e muito mais. Esse site é nosso ponto de encontro. Sejam bem-vindos à era do amor, da força
+                e da verdade. Sejam bem-vindos à nossa história.</p>
+        </section>
+
+        <section id="carreira">
+            <h1>Carreira da Luisa</h1>
+            <img src="https://i.pinimg.com/736x/b6/18/0f/b6180ff1fee13eee6f520dff01bf44e2.jpg" alt="Carreira">
+   
+            <h2>Início da Carreira</h2>
+            <img src="https://i.pinimg.com/736x/a8/c3/32/a8c3327c0e3bc10eb31907fd476e8c78.jpg">
+            <p>Luísa Gerloff Sonza, mais conhecida como Luísa Sonza, nasceu em Tuparendi, no interior do
+            Rio Grande do Sul, e desde pequena já demonstrava sua conexão com a música. Aos 7 anos, começou a cantar na
+            banda Sol Maior, apresentando-se em eventos diversos, desde casamentos até velórios, o que mostra como sua
+            trajetória artística começou de forma humilde e determinada. Com o tempo, Luísa passou a publicar vídeos
+            de covers no YouTube, onde conquistou visibilidade por sua potência vocal e carisma. Sua primeira música
+            autoral foi Good Vibes, mas foi com Rebolar que ela ganhou destaque no cenário musical nacional.
+            Curiosamente, hoje em dia, Luísa não gosta dessa música e afirma que, com a maturidade artística que
+            adquiriu, jamais lançaria algo assim novamente. Apesar disso, a faixa continua sendo uma das queridinhas
+            dos fãs, que sempre pedem para ela cantá-la nos shows, e ela leva tudo com bom humor, brincando com o
+            público sobre isso.</p>
+           
+            <h2>Relacionamento com Whindersson Nunes</h2>
+            <img src="https://i.pinimg.com/736x/9d/b5/f0/9db5f09fe29e7af8356ba3458297bcf4.jpg">
+            <p>O humorista Whindersson Nunes conheceu a Luisa através de seus vídeos de covers no YouTube, e os dois
+            começaram a namorar em 2016. O relacionamento evoluiu rapidamente: dois meses depois, já estavam
+            morando juntos. No dia 28 de fevereiro de 2018, eles se casaram em uma cerimônia celebrada com grande
+            repercussão na mídia. Durante o relacionamento, Luísa compôs Olhos Castanhos como uma homenagem a ele.
+            Apesar da sintonia aparente, o casal anunciou o término no dia 29 de abril de 2020. Durante a relação,
+            Luísa foi alvo de críticas, piadas ofensivas e comentários machistas, que a colocavam em uma posição
+            injusta, como se não fosse “boa o suficiente” para Whindersson. Ela era sexualizada e julgada pelo seu
+            estilo, suas roupas e sua performance artística, algo que a afetou profundamente.</p>
+           
+            <h2>Ataques nas Redes Sociais Pós-Término</h2>
+            <img src="https://i.pinimg.com/736x/3d/64/2e/3d642ee13806392ce3092ed3a9ccb403.jpg">
+            <p>Após o término, Luísa enfrentou uma nova onda de ataques virtuais ainda mais pesados. Muitos passaram
+            a acusá-la injustamente de traição, mesmo sem qualquer prova especialmente após ela assumir um novo
+            relacionamento meses depois. Alguns até diziam que ela só havia se casado com Whindersson “por fama”,
+            ignorando completamente seu talento e trajetória. Durante o luto de Whindersson e sua então noiva
+            Maria Lina, que perderam o filho, pessoas chegaram ao ponto de culpar Luísa de forma cruel e desumana.
+            Ela foi vítima de misoginia, ameaças de morte e teve que desativar os comentários em suas redes sociais.
+            Em entrevistas, revelou ter desenvolvido crises de ansiedade, depressão e pânico em decorrência desse
+            período sombrio. Foi um momento decisivo que a fez dar uma pausa em tudo para cuidar de si.</p>
+           
+            <h2>Namoro com Vitão</h2>
+            <img src="https://i.pinimg.com/736x/b8/43/dd/b843dd7c0b3a3c5348ef13bbeca2897e.jpg">
+            <p>Meses após o término com Whindersson, Luísa assumiu o relacionamento com o cantor Vitão. A internet
+            reagiu com extrema hostilidade: surgiram rumores de que Vitão teria sido o "pivô" da separação, o que ambos
+            sempre negaram. O relacionamento foi marcado por muito hate, e enquanto Vitão também sofreu críticas,
+            a carga emocional recaiu majoritariamente sobre Luísa. Ela foi novamente chamada de “infiel” e “interesseira”.
+            Mesmo assim, o casal tentou manter o romance de forma leve e respeitosa até o fim do relacionamento,
+            que terminou sem escândalos, mas com uma lição importante sobre como o machismo estrutural age nas
+            redes sociais.</p>
+           
+            <h2>Doce22</h2>
+            <img src="https://i.pinimg.com/736x/4f/17/3e/4f173e53e44c9cb8bec362effc8ed277.jpg">
+            <p>Após viver uma fase difícil, Luísa renasceu musicalmente com o álbum Doce22, lançado em 18 de julho de 2021,
+            esse álbum era para ser lançado antes, mas devido aos ataques constantes de morte ela adiou e foi ao México
+            para tentar se curar um pouco, e após voltar de viagem ela lança o Doce22. O projeto é considerado um
+            divisor de águas em sua carreira, com faixas confessionais que exploram a dor, os traumas e a força de
+            seguir em frente. Doce22 bateu recordes: foi a maior estreia semanal da história do Spotify Brasil,
+            com 29,8 milhões de streams; alcançou 4,1 milhões de reproduções nas primeiras 24 horas; recebeu certificação
+            de Duplo Diamante; e ultrapassou a marca de 1 bilhão de streams em janeiro de 2022. Além disso, foi indicado
+            ao Grammy Latino como Melhor Álbum Pop Contemporâneo em Língua Portuguesa. Essa era consolidou Luísa como
+            uma artista pop de relevância internacional.</p>
+           
+            <h2>Relacionamento com Chico Moedas</h2>
+            <img src="https://i.pinimg.com/736x/12/6b/f1/126bf1eab804331ad691d5fc8ee6ed9c.jpg">
+            <p>Em 2023, Luísa começou um relacionamento com Chico Moedas, um influenciador digital.
+            O namoro durou cerca de dois meses e teve um fim conturbado após uma traição por parte dele.
+            O caso aconteceu no banheiro do Bar da Cachaça, no Rio de Janeiro, local que é inclusive mencionado
+            na música Chico, uma das faixas de destaque do álbum Escândalo Íntimo. No dia seguinte à descoberta da
+            traição, Luísa fez um pronunciamento ao vivo no programa da Ana Maria Braga, lendo uma carta aberta
+            comovente e firme, encerrando publicamente a relação. O episódio gerou uma comoção nacional e
+            reafirmou o quanto Luísa tem usado sua vulnerabilidade como uma arma de empoderamento.</p>
+           
+            <h2>Escândalo Íntimo</h2>
+            <img src="https://i.pinimg.com/736x/b9/83/19/b98319b405af295dfe0a833ec2d98eff.jpg">
+            <p>Escândalo Íntimo, lançado em 29 de agosto de 2023, marcou uma nova fase na carreira de Luísa.
+            Anunciado de forma impactante com um outdoor na Rodovia Régis Bittencourt, o álbum foi criado entre
+            São Paulo e Los Angeles em apenas 8 meses. Mais uma vez, Luísa bateu recordes: 15,6 milhões de streams
+            nas primeiras 24 horas (a maior estreia da história do Spotify Brasil), seis músicas simultaneamente
+            no Top 10 nacional, e destaque internacional, ficando entre as maiores estreias latinas no Spotify.
+            A faixa Penhasco2, em parceria com Demi Lovato, quebrou barreiras ao alcançar 2 milhões de streams em
+            um dia. O álbum também rendeu uma nova indicação ao Grammy Latino. Escândalo Íntimo não é só sucesso
+            comercial é profundidade emocional, ousadia estética e maturidade artística.</p>
+           
+            <h2>Documentário “Se Eu Fosse Luísa Sonza”</h2>
+            <img src="https://i.pinimg.com/736x/96/be/b3/96beb33d44336e6d05a3b8c5f1567fbb.jpg">
+            <p>O documentário, lançado em parceria com a Netflix, é um mergulho íntimo na vida e na mente de Luísa.
+            Nele, a artista narra sua trajetória, traumas, medos e conquistas. Ela fala abertamente sobre
+            suas crises de ansiedade, depressão, ataques de pânico e o peso de ser uma mulher forte e exposta
+            em um país ainda profundamente machista. Também mostra os bastidores da criação de seus álbuns
+            e da sua transformação pessoal. O documentário emociona, inspira e oferece uma nova dimensão
+            sobre quem é, de fato, Luísa Sonza além dos palcos.</p>
+           
+            <h2>Relacionamento com Luís Ribeirinho</h2>
+            <img src="https://i.pinimg.com/736x/aa/b1/90/aab190398f9c54b02d33317272cf4145.jpg">
+            <p>Atualmente, Luísa vive um relacionamento mais reservado com o cirurgião plástico português
+            Luís Ribeirinho. Diferente dos anteriores, ela tem optado por manter esse relacionamento mais
+            discreto, longe dos holofotes e das redes sociais. Luís é conhecido por seu profissionalismo e
+            discrição, o que tem proporcionado a Luísa um espaço de paz e estabilidade. Os dois foram vistos
+            juntos em viagens e eventos, e ela já deu indícios de que está feliz, mas não expõe muito talvez
+            como forma de preservar sua saúde mental e seu bem-estar. Esse relacionamento marca uma nova
+            postura de Luísa sobre sua vida pessoal: menos exposição, mais equilíbrio.</p>
+           
+            <h2>LS4</h2>
+            <img src="https://i.pinimg.com/736x/13/8f/05/138f05ed9ae9252aa74eed8e6041ed91.jpg">
+            <p>Com dois álbuns históricos na bagagem, Luísa já confirmou que o LS4 está em desenvolvimento
+            e promete ser ainda mais ousado. Previsto para 2026, o próximo projeto deve trazer uma mistura de
+            sonoridades, letras profundas, coreografias impactantes e participações especiais tanto nacionais
+            quanto internacionais. Os fãs já estão ansiosos, e Luísa deixa claro que esse próximo trabalho será
+            mais uma afirmação da sua identidade artística. Ela não tem medo de se reinventar e promete entregar
+            mais uma vez um álbum que será divisor de águas no pop brasileiro.</p>
+        </section>
+
+        <section id="show">
+            <h1>Show da Luisa</h1>
+            <img src="https://i.pinimg.com/736x/15/6c/29/156c2956efd7abebeb6e758de3a6a782.jpg" alt="Show">
+            <p>Luisa Sonza tem conquistado os palcos de todo o Brasil e do mundo com suas apresentações inesquecíveis.
+                Com sua presença de palco única e um repertório que mistura poder, emoção e diversão, Luísa transforma
+                cada show em uma experiência imersiva. Seja com hits de sucesso ou novas surpresas para o público,
+                seus concertos são uma celebração do talento, da força feminina e da conexão com seus fãs. Explore aqui top 5 shows
+                da nossa amada loirinha e de suas performances mais marcantes.</p>
+           
+            <h2>Top 5 Melhores Shows</h2>
+            <div class="show-container">
+                <div class="show">
+                    <h2>1 Rock in Rio 2024</h2>
+                    <img src="https://media.gettyimages.com/id/2173052601/pt/foto/brazilian-singer-luisa-sonza-performs-during-the-rock-in-rio-music-festival-in-the-rio-2016.jpg?s=612x612&w=0&k=20&c=ZPKfkii1B-dWDStQmMOzlLV_NfZCiRlgqo6_M81U3yk=" alt="Rock in Rio 2024" style="width: 50%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Esse foi sem dúvidas o melhor show da Luisa, ela abriu o palco mundo,
+                    no qual é o palco principal do Rock in Rio, com o total de 115 mil pessoas. Foi nesse momento que deu início
+                    à nova era do Escândalo Íntimo, com músicas inéditas do deluxe, novas apresentações e coreografias repaginadas.
+                    A estética do show chamou atenção: figurinos impactantes, cenário grandioso e projeções dramáticas criaram uma
+                    atmosfera intensa, digna da narrativa do álbum. Luísa também emocionou o público com homenagens ao Rio Grande do Sul,
+                    misturando pop com tradição gaúcha. Ela se entregou por completo, emocionando os fãs com sua conexão verdadeira e
+                    presença de palco arrebatadora. O show foi celebrado como histórico pela mídia, e nas redes,
+                    o público só confirmou: Luísa fez história no maior festival do país.</p>
+                </div>
+                <div class="show">
+                    <h2>2 Lollapalooza 2024 </h2>
+                    <img src="https://i.pinimg.com/736x/b8/fb/d3/b8fbd39229de9032e3fccda8b45498e8.jpg" alt="Lollapalooza 2024" style="width: 50%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">O show da Luísa Sonza no Lollapalooza 2024 foi marcante por representar
+                        mais uma virada artística em sua carreira. Mesmo fora do palco principal, ela entregou uma performance
+                        conceitual com estética country-pop e figurino de cowgirl, iniciando uma nova fase da era
+                        Escândalo Íntimo com releituras criativas. Ela também emocionou ao homenagear Marília Mendonça, reforçando
+                        sua conexão com outras grandes vozes femininas. Apesar dos problemas técnicos no início, conquistou o público
+                        com carisma, entrega e emoção. Foi um show que revelou uma Luísa mais madura e ousada, provando que não
+                        precisa de grandes estruturas para brilhar e que ela é sim o espetáculo.</p>
+                </div>
+                <div class="show">
+                    <h2>3 Rock in Rio 2022</h2>
+                    <img src="https://i.pinimg.com/736x/17/df/c8/17dfc818e8a9c71f54aeca6bc556a9f1.jpg" alt="Rock in Rio 2022" style="width: 50%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">O show da Luísa Sonza no Rock in Rio 2022 foi marcante por ser a sua primeira
+                        vez no festival. Ela se apresentou no Palco Sunset, trazendo uma energia contagiante e uma presença de
+                        palco impressionante. Com hits como “Modo Turbo” e “Anaconda”, Luísa conquistou o público e se destacou
+                        com sua performance cheia de atitude. A homenagem emocionante a Marília Mendonça também foi um dos momentos
+                        mais marcantes, demonstrando respeito e carinho pela música brasileira. Luísa se firmou como uma das
+                        principais artistas pop do Brasil, provando que tem o poder de brilhar, seja em palcos grandes ou intimistas,
+                        com uma performance memorável.</p>
+                </div>
+                <div class="show">
+                    <h2>4 Rock in Rio Lisboa 2024</h2>
+                    <img src="https://i.pinimg.com/736x/60/25/3e/60253e24adc01dca2e3b19d6e5e8f465.jpg" alt="Rock in Rio Lisboa 2024" style="width: 50%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">O show da Luísa Sonza no Rock in Rio Lisboa 2024 foi marcante por consolidar sua
+                        presença internacional. Com uma performance cheia de energia no Palco Galp, ela atraiu cerca de
+                        80 mil pessoas, superando até artistas como Camila Cabello e Doja Cat. A apresentação, que celebrou o
+                        álbum Escândalo Íntimo com sucessos como “Sagrado Profano” e “Penhasco2”, emocionou o público.
+                        Sua estreia no festival foi histórica, reforçando a sua posição como uma das principais artistas
+                        pop brasileiras e ampliando seu reconhecimento global.</p>
+                </div>
+                <div class="show">
+                    <h2>5 Salve o Sul</h2>
+                    <img src="https://i.pinimg.com/736x/42/a7/e7/42a7e7c75dd17a1e2ba9edf760fae979.jpg" alt="Salve o Sul" style="width: 50%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Esse foi um show super especial, pois o Rio Grande do Sul cidade natal
+                        da Luisa, estava vivendo sua pior catástrofe estava tendo tempos de chuvas e a cidade ficou inundada
+                        e ficou de baixo d'água, e para arrecadar comida, bebida ou até mesmo dinheiro Luisa e Pedro Sampaio
+                        juntaram diversos artistas em um só festival para dois dias cheios de músicas, mais pensando na boa ação para ajudar sua cidade natal, o vestival
+                        contou com dois dias um deles teria Leonardo, Zezé Di Camargo e Luciano, Chitãozinho e Xororó mas conhecidos como
+                        amigos, e em outro dia diversos outros artistas como por exemplo Lexa, Grupo Menos é Mais, Pocah,
+                        Duda Beat entre outros artistas. E o festival arrecadou cerca de 8,2 milhões com a venda de ingressos e
+                        esse valor foi destinado às vítimas da tragédia do Rio Grande do Sul.</p>
+        </section>
+
+        <section id="ballet">
+            <h1>Ballet da Luisa</h1>
+            <img src="https://i.pinimg.com/736x/dd/12/e0/dd12e002246de8c9f6e01fe9f3f29de6.jpg" alt="Ballet">
+            <h1>Bem-vindo a Creche da Sonza!</h1>
                 <p>Sonzers, às vezes vocês vão no google por exemplo pesquisar sobre alguém do ballet da Luisa
                     e não tem a informação que você precisa né? Então por isso resolvi criar uma seção para eles,
                     pois eles também fazem parte da equipe Luisa Sonza, e eles também tem muitos fãs.
@@ -395,21 +340,22 @@
                         estilo que pratica atualmente. Apesar de enfrentar dificuldades financeiras e trabalhar em outras
                         áreas, Amanda decidiu seguir sua paixão pela dança. Aos 18 anos, teve sua primeira experiência profissional
                         com uma banda de forró, viajando em turnê. Posteriormente, trabalhou com artistas como Ludmilla, Aretuza,
-                        Maiara e Maraisa, e Wanessa Camargo. Em 2018, iniciou uma parceria com Luísa Sonza, participando do
-                        clipe "Devagarinho" e, desde então, atua como bailarina e assistente de coreografia da cantora. Além dos palcos,
-                        Amanda ganhou destaque nas redes sociais, especialmente no TikTok, onde compartilha coreografias que viralizam,
-                        como a da música "Anaconda". Ela utiliza a plataforma para democratizar a dança e inspirar pessoas de todas as
-                        idades a se movimentarem, além de ananconda ela viralizou criando uma dc (coreografia) em música chamada
-                        "Bandido Gostoso" sendo seu solo nos shows da Luisa, mais também é dona de outras coreografias como por exemplo
-                        "Nu" da Anitta, "Playgroud" e "Vingancinha" ambas da Vivi Wanderley, Amanda faz aniversário no dia 29 de setembro de 1993.</p>
-        
+                        Lexa, e Wanessa Camargo. Em 2018, iniciou uma parceria com Luísa Sonza, participando do
+                        clipe "Devagarinho" e, desde então, atua como bailarina e assistente de coreografia da cantora e atualmente
+                        é a bailarina que está há mais tempo com a Luisa. Além dos palcos, Amanda ganhou destaque nas redes sociais,
+                        especialmente no TikTok, onde compartilha coreografias que viralizam, como a da música "Anaconda".
+                        Ela utiliza a plataforma para democratizar a dança e inspirar pessoas de todas as idades a se movimentarem,
+                        além de ananconda ela viralizou criando uma dc (coreografia) em música chamada "Bandido Gostoso" sendo seu
+                        solo nos shows da Luisa, mais também é dona de outras coreografias como por exemplo "Nu" da Anitta,
+                        "Playgroud" e "Vingancinha" ambas da Vivi Wanderley, Amanda faz aniversário no dia 29 de setembro de 1993.</p>
+       
                   <div style="margin: 10px; text-align: center;">
                      <h2>Bruno</h2>
                      <img src="https://i.pinimg.com/736x/cc/8a/ca/cc8aca97d8898899ff1cc8e01462885a.jpg" alt="Bruno" style="width: 20%; margin: 10px auto; display: block;">
-                     <p style="text-align: justify;">Bruno Vitor é um talentoso bailarino brasileiro que integra o corpo de dança da cantora
-                        Luísa Sonza ele foi anunciado como novo integrante do ballet em julho de 2023. Natural de Brasília, ele se mudou
-                        para São Paulo para seguir sua carreira na dança.
-                        Desde então, Bruno tem se destacado em apresentações ao vivo e videoclipes da artista. Ele participou de
+                     <p style="text-align: justify;">Bruno Vitor, nascido dia 05 de janeiro, é um talentoso bailarino brasileiro 
+                        que integra o corpo de dança da cantora Luísa Sonza ele foi anunciado como novo integrante do ballet 
+                        em julho de 2023. Natural de Brasília, ele se mudou para São Paulo para seguir sua carreira na 
+                        dança. Desde então, Bruno tem se destacado em apresentações ao vivo e videoclipes da artista. Ele participou de
                         coreografias marcantes, como a da música "Sagrado Profano", sob a direção de Flávio Verne. Além disso,
                         compartilha em suas redes sociais bastidores e ensaios da turnê, mostrando a rotina intensa e apaixonada de
                         um dançarino profissional.
@@ -420,7 +366,7 @@
                     <div style="margin: 10px; text-align: center;">
                         <h2>Giovana</h2>
                         <img src="https://i.pinimg.com/736x/4d/1e/27/4d1e27d8cd5c4fe90a7f6debf69b2a75.jpg" alt="Giovana" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Giovana Barreto é uma talentosa bailarina brasileira que integra o corpo
+                        <p style="text-align: justify;">Giovana Barreto, nascida no dia 6 de abril de 1995, é uma talentosa bailarina brasileira que integra o corpo
                         de dança da cantora Luísa Sonza desde 2022. Carioca, ela iniciou sua carreira profissional em 2018 e,
                         desde então, tem se destacado no cenário da dança pop nacional.
                         Além de sua atuação com Luísa Sonza, Giovana possui um currículo extenso, tendo trabalhado com diversas
@@ -473,12 +419,12 @@
                         ao lado de outras bailarinas como Amanda Araújo, Mariana Maciel, Milena Conde, Thais Lírio e Giovana Barreto.
                         Sua trajetória reflete dedicação, versatilidade e paixão pela dança, consolidando sua posição como uma
                         das profissionais de destaque no cenário da dança pop brasileira.</p>
-        
+       
                     <div style="margin: 10px; text-align: center;">
                         <h2>Maciel</h2>
                         <img src="https://i.pinimg.com/736x/d2/80/86/d2808605ba5d3d0c059bd705f8c78375.jpg" alt="Maciel" style="width: 20%; margin: 10px auto; display: block;">
                         <p style="text-align: justify;">Mariana Maciel é uma talentosa bailarina, coreógrafa e professora de dança
-                        brasileira, natural do Rio de Janeiro. Com uma carreira sólida no cenário da dança pop, ela já trabalhou com
+                        brasileira, natural do Rio de Janeiro, nasceu no dia 16 de maio em 2000. Com uma carreira sólida no cenário da dança pop, ela já trabalhou com
                         artistas renomados como Ludmilla, Dennis DJ e Vitão. Desde 2022, Mariana integra o corpo de dança da cantora
                         Luísa Sonza, participando de turnês, videoclipes e apresentações ao vivo.
                         Em outubro de 2023, Mariana ganhou destaque na mídia após ser flagrada aos beijos com Luísa Sonza em uma
@@ -490,7 +436,7 @@
                     <div style="margin: 10px; text-align: center;">
                         <h2>Milena</h2>
                         <img src="https://i.pinimg.com/736x/fe/13/5d/fe135df3f43a79ae8172dd455e8ed1e9.jpg" alt="Milena " style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Milena Conde é uma talentosa bailarina e coreógrafa brasileira que integra o
+                        <p style="text-align: justify;">Milena Conde, nascida no dia 21 de janeiro de 1998, é uma talentosa bailarina e coreógrafa brasileira que integra o
                         corpo de dança da cantora Luísa Sonza. Natural de Brasília, Milena se mudou para São Paulo para expandir
                         sua carreira na dança.
                         Com uma sólida formação em danças urbanas, Milena já colaborou com diversos artistas renomados e
@@ -568,187 +514,120 @@
                         inspirar muitos, consolidando sua posição como um dos bailarinos mais promissores do Brasil.
                         Para conhecer mais sobre o trabalho de Vini, você pode acompanhar seus vídeos no TikTok e no Instagram,
                         onde ele compartilha conteúdos relacionados à dança e à sua carreira artística</p>
-            </section>
-            <head>
-                <style>
-                    #carteirinha {
-                        text-align: center;
-                        margin-top: 20px;
-                    }
-                    
-                    #carteirinha-form {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        padding: 20px;
-                        border: 1px solid #ccc;
-                        border-radius: 10px;
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
-                    
-                    #carteirinha-form label {
-                        margin-bottom: 10px;
-                    }
-                    
-                    #carteirinha-form input {
-                        padding: 10px;
-                        margin-bottom: 20px;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                    }
-                    
-                    #carteirinha-form button {
-                        padding: 10px 20px;
-                        background-color: #4CAF50;
-                        color: #fff;
-                        border: none;
-                        border-radius: 5px;
-                        cursor: pointer;
-                    }
-                    
-                    #carteirinha-form button:hover {
-                        background-color: #3e8e41;
-                    }
-                    
-                    #result {
-                        display: none;
-                        text-align: center;
-                        margin-top: 20px;
-                    }
-                    
-                    #result img {
-                        width: 50%;
-                        margin: 20px auto;
-                        border-radius: 10px;
-                    }
-                    
-                    #result p {
-                        margin-bottom: 20px;
-                    }
-                    
-                    #result a {
-                        text-decoration: none;
-                        color: #337ab7;
-                    }
-                    
-                    #result a:hover {
-                        color: #23527c;
-                    }
-                </style>
-            </head>
-            <body>
-                <section id="carteirinha">
-                    <h1>Crie Sua Carteirinha de Fã!</h1>
-                    <form id="carteirinha-form">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" required>
-                        <span id="name-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <label for="age">Idade:</label>
-                        <input type="number" id="age" required>
-                        <span id="age-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <label for="city">Cidade/Estado:</label>
-                        <input type="text" id="city" required>
-                        <span id="city-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <label for="since">Fã desde:</label>
-                        <input type="text" id="since" required>
-                        <span id="since-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <label for="favoriteSong">Música preferida:</label>
-                        <input type="text" id="favoriteSong" required>
-                        <span id="favoriteSong-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <label for="unforgettableShow">Show inesquecível:</label>
-                        <input type="text" id="unforgettableShow" required>
-                        <span id="unforgettableShow-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
-                        <br>
-                
-                        <button type="button" id="submitBtn">Concluído</button>
-                        <span id="submit-error" style="color: red; display: none;">Não foi possível fazer a carteirinha. Por favor, preencha todos os campos.</span>
-                    </form>
-                    <div id="result" style="display:none;">
-                        <p>Sua carteirinha foi gerada com sucesso!</p>
-                        <a href="https://i.pinimg.com/736x/0f/ca/cc/0fcacc97b5cc508dc2a8d7613ad9196a.jpg" id="imageLink">
-                            <img src="https://i.pinimg.com/736x/0f/ca/cc/0fcacc97b5cc508dc2a8d7613ad9196a.jpg" alt="Carteirinha do Fã">
-                        </a>
-                        <p style="margin-top: 20px; text-align: center; font-style: italic;">
-                            "Cada fã é uma história, uma luz, uma iguaria. Sua jornada ao lado de Luísa Sonza é única,
-                            e a música sempre será nossa companheira. Como a própria Luísa diz:"
-                            "Tem gente que amanhece com você, tem gente que é o seu amanhecer, tem gente que acontece e
-                            nada a ver, tem gente e tem eu e você Iguaria - Luísa Sonza"
-                        </p>
-                        <div style="text-align: center; margin-top: 20px;">
-                            <p>Para acompanhar mais de perto a Luísa Sonza, siga ela nas redes sociais:</p>
-                            <button style="margin: 5px;" onclick="window.open('https://www.instagram.com/luisasonza/', '_blank')">Siga a Luísa no Instagram</button>
-                            <button style="margin: 5px;" onclick="window.open('https://www.tiktok.com/@luisasonza', '_blank')">Siga a Luísa no TikTok</button>
-                          </div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                
-                <script>
-                    document.getElementById('submitBtn').addEventListener('click', function() {
-                        var name = document.getElementById('name').value;
-                        var age = document.getElementById('age').value;
-                        var city = document.getElementById('city').value;
-                        var since = document.getElementById('since').value;
-                        var favoriteSong = document.getElementById('favoriteSong').value;
-                        var unforgettableShow = document.getElementById('unforgettableShow').value;
-                
-                        if (name == "" || age == "" || city == "" || since == "" || favoriteSong == "" || unforgettableShow == "") {
-                            document.getElementById('submit-error').style.display = 'block';
-                            if (name == "") {
-                                document.getElementById('name-error').style.display = 'block';
-                            } else {
-                                document.getElementById('name-error').style.display = 'none';
-                            }
-                
-                            if (age == "") {
-                                document.getElementById('age-error').style.display = 'block';
-                            } else {
-                                document.getElementById('age-error').style.display = 'none';
-                            }
-                
-                            if (city == "") {
-                                document.getElementById('city-error').style.display = 'block';
-                            } else {
-                                document.getElementById('city-error').style.display = 'none';
-                            }
-                
-                            if (since == "") {
-                                document.getElementById('since-error').style.display = 'block';
-                            } else {
-                                document.getElementById('since-error').style.display = 'none';
-                            }
-                
-                            if (favoriteSong == "") {
-                                document.getElementById('favoriteSong-error').style.display = 'block';
-                            } else {
-                                document.getElementById('favoriteSong-error').style.display = 'none';
-                            }
-                
-                            if (unforgettableShow == "") {
-                                document.getElementById('unforgettableShow-error').style.display = 'block';
-                            } else {
-                                document.getElementById('unforgettableShow-error').style.display = 'none';
-                            }
-                        } else {
-                            document.getElementById('carteirinha-form').style.display = 'none';
-                            document.getElementById('result').style.display = 'block';
-                        }
-                    });
+        </section>
+    </section>
+    <section id="carteirinha">
+        <h1>Crie Sua Carteirinha de Fã!</h1>
+        <form id="carteirinha-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            <span id="name-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <label for="age">Idade:</label>
+            <input type="number" id="age" required>
+            <span id="age-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <label for="city">Cidade/Estado:</label>
+            <input type="text" id="city" required>
+            <span id="city-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <label for="since">Fã desde:</label>
+            <input type="text" id="since" required>
+            <span id="since-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <label for="favoriteSong">Música preferida:</label>
+            <input type="text" id="favoriteSong" required>
+            <span id="favoriteSong-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <label for="unforgettableShow">Show inesquecível:</label>
+            <input type="text" id="unforgettableShow" required>
+            <span id="unforgettableShow-error" style="color: red; display: none;">É obrigatório preencher este campo</span>
+            <br>
+   
+            <button type="button" id="submitBtn">Concluído</button>
+            <span id="submit-error" style="color: red; display: none;">Não foi possível fazer a carteirinha. Por favor, preencha todos os campos.</span>
+        </form>
+        <div id="result" style="display:none;">
+        <p>Sua carteirinha foi gerada com sucesso!</p>
+            <a href="https://i.pinimg.com/736x/0f/ca/cc/0fcacc97b5cc508dc2a8d7613ad9196a.jpg" id="imageLink">
+                <img src="https://i.pinimg.com/736x/0f/ca/cc/0fcacc97b5cc508dc2a8d7613ad9196a.jpg" alt="Carteirinha do Fã">
+            </a>
+            <p style="margin-top: 20px; text-align: center; font-style: italic;">
+                "Cada fã é uma história, uma luz, uma iguaria. Sua jornada ao lado de Luísa Sonza é única,
+                e a música sempre será nossa companheira. Como a própria Luísa diz:"
+                "Tem gente que amanhece com você, tem gente que é o seu amanhecer, tem gente que acontece e
+                nada a ver, tem gente e tem eu e você Iguaria - Luísa Sonza"
+            </p>
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Para acompanhar mais de perto a Luísa Sonza, siga ela nas redes sociais:</p>
+                <button style="margin: 5px;" onclick="window.open('https://www.instagram.com/luisasonza/', '_blank')">Siga a Luísa no Instagram</button>
+                <button style="margin: 5px;" onclick="window.open('https://www.tiktok.com/@luisasonza', '_blank')">Siga a Luísa no TikTok</button>
+              </div>
+                </a>
+            </div>
+        </div>
+    </section>
+   
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var city = document.getElementById('city').value;
+            var since = document.getElementById('since').value;
+            var favoriteSong = document.getElementById('favoriteSong').value;
+            var unforgettableShow = document.getElementById('unforgettableShow').value;
+   
+            if (name == "" || age == "" || city == "" || since == "" || favoriteSong == "" || unforgettableShow == "") {
+                document.getElementById('submit-error').style.display = 'block';
+                if (name == "") {
+                    document.getElementById('name-error').style.display = 'block';
+                } else {
+                    document.getElementById('name-error').style.display = 'none';
+                }
+   
+                if (age == "") {
+                    document.getElementById('age-error').style.display = 'block';
+                } else {
+                    document.getElementById('age-error').style.display = 'none';
+                }
+   
+                if (city == "") {
+                    document.getElementById('city-error').style.display = 'block';
+                } else {
+                    document.getElementById('city-error').style.display = 'none';
+                }
+   
+                if (since == "") {
+                    document.getElementById('since-error').style.display = 'block';
+                } else {
+                    document.getElementById('since-error').style.display = 'none';
+                }
+   
+                if (favoriteSong == "") {
+                    document.getElementById('favoriteSong-error').style.display = 'block';
+                } else {
+                    document.getElementById('favoriteSong-error').style.display = 'none';
+                }
+   
+                if (unforgettableShow == "") {
+                    document.getElementById('unforgettableShow-error').style.display = 'block';
+                } else {
+                    document.getElementById('unforgettableShow-error').style.display = 'none';
+                }
+            } else {
+                document.getElementById('carteirinha-form').style.display = 'none';
+                document.getElementById('result').style.display = 'block';
+            }
+        });
 
-                    window.onload = function() {
-                window.location.hash = 'introducao';
-                };
-                </script>
-            </body>
-            </html>
+        window.onload = function() {
+    window.location.hash = 'introducao';
+    };
+    </script>
+</body>
+</html>
