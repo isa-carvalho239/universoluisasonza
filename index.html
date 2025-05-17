@@ -5,162 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Luisa Sonza</title>
     <link rel="icon" href="favicon.ico">
-  <style>
-    * {
-    box-sizing: border-box;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
+        header {
+            background-color: #6a1b9a;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
 
-header {
-    background-color: #6a1b9a;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-}
+        main {
+            padding: 20px;
+        }
 
-main {
-    padding: 20px;
-}
+        section {
+            display: none;
+        }
 
-section {
-    display: none;
-}
+        section:target {
+            display: block;
+        }
 
-section:target {
-    display: block;
-}
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
 
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
-}
+        section h1, section h2 {
+            text-align: center;
+        }
 
-#ballet img {
-    width: 70%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-}
+        section p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
 
-section h1,
-section h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+        #carteirinha-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-section p {
-    max-width: 100%;
-    margin: 0 auto 20px;
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-    padding: 0 10px;
-    word-wrap: break-word;
-}
+        #carteirinha-form label, input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
-#carteirinha-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
-}
+        #carteirinha-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-#carteirinha-form label,
-input {
-    width: 100%;
-    margin-bottom: 10px;
-}
+        #carteirinha-form button {
+            padding: 10px 20px;
+            background-color: #6a1b9a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-#carteirinha-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
+        #carteirinha-form button:hover {
+            background-color: #4a148c;
+        }
 
-#carteirinha-form button {
-    padding: 12px 20px;
-    background-color: #6a1b9a;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
+        #result {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
 
-#carteirinha-form button:hover {
-    background-color: #4a148c;
-}
-
-#result {
-    text-align: center;
-    display: none;
-    margin-top: 20px;
-}
-
-#result img {
-    width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.6em;
-    }
-
-    nav a {
-        font-size: 1em;
-    }
-
-    section h1,
-    section h2 {
-        font-size: 1.5em;
-    }
-
-    section p {
-        font-size: 1em;
-    }
-
-    #ballet img {
-        width: 90%;
-    }
-
-    #carteirinha-form {
-        width: 90%;
-    }
-</style>
+        #result img {
+            width: 50%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -367,31 +317,6 @@ input {
                         Duda Beat entre outros artistas. E o festival arrecadou cerca de 8,2 milhões com a venda de ingressos e
                         esse valor foi destinado às vítimas da tragédia do Rio Grande do Sul.</p>
         </section>
-<script>
-#ballet {
-    padding: 20px;
-    text-align: center;
-}
-
-#ballet h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-#ballet img {
-    width: 70%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-}
-
-#ballet p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-    padding: 0 10px;
-}
-</script>
 
         <section id="ballet">
             <h1>Ballet da Luisa</h1>
@@ -403,192 +328,183 @@ input {
                     Mais porque "Creche da Sonza"? Bom se vocês forem ver vídeos eles são muito bagunceiros, adoram
                     zoar a Luisa, são piores que criança então creche descreve muito bem eles e agora vocês vão saber
                     um pouco mais de cada um deles!</p>
-                  <div style="margin-bottom: 20px; text-align: center;">
+                        
+                    <div style="margin-bottom: 20px; text-align: center;">
                     <h2>Amanda Araújo</h2>
                     <img src="https://i.pinimg.com/736x/7c/f2/00/7cf20089a384e2c327778c062e2c4824.jpg" alt="Amanda Araújo" style="width: 20%; margin: 10px auto; display: block;">
-                    <p style="text-align: justify;">Amanda Araújo, a mais querida e a favorita da maioria dos Sonzers
-                        Amanda Araújo iniciou sua trajetória artística no teatro aos 7 anos, influenciada por uma prima
-                        atriz e incentivada por sua mãe, que via na filha a oportunidade de realizar o sonho de trabalhar
-                        com arte. Com o tempo, ela passou a fazer cursos de canto, instrumentos musicais e dança.
-                        Aos 9 anos, apaixonou-se pela dança e começou a estudar estilos como jazz, balé contemporâneo,
-                        forró, tango e dança de salão. Aos 14 anos, conheceu o street dance, que a levou ao jazz funk,
-                        estilo que pratica atualmente. Apesar de enfrentar dificuldades financeiras e trabalhar em outras
-                        áreas, Amanda decidiu seguir sua paixão pela dança. Aos 18 anos, teve sua primeira experiência profissional
-                        com uma banda de forró, viajando em turnê. Posteriormente, trabalhou com artistas como Ludmilla, Aretuza,
-                        Lexa, e Wanessa Camargo. Em 2018, iniciou uma parceria com Luísa Sonza, participando do
-                        clipe "Devagarinho" e, desde então, atua como bailarina e assistente de coreografia da cantora e atualmente
-                        é a bailarina que está há mais tempo com a Luisa. Além dos palcos, Amanda ganhou destaque nas redes sociais,
-                        especialmente no TikTok, onde compartilha coreografias que viralizam, como a da música "Anaconda".
-                        Ela utiliza a plataforma para democratizar a dança e inspirar pessoas de todas as idades a se movimentarem,
-                        além de ananconda ela viralizou criando uma dc (coreografia) em música chamada "Bandido Gostoso" sendo seu
-                        solo nos shows da Luisa, mais também é dona de outras coreografias como por exemplo "Nu" da Anitta,
-                        "Playgroud" e "Vingancinha" ambas da Vivi Wanderley, Amanda faz aniversário no dia 29 de setembro de 1993.</p>
-       
-                  <div style="margin: 10px; text-align: center;">
-                     <h2>Bruno</h2>
-                     <img src="https://i.pinimg.com/736x/cc/8a/ca/cc8aca97d8898899ff1cc8e01462885a.jpg" alt="Bruno" style="width: 20%; margin: 10px auto; display: block;">
-                     <p style="text-align: justify;">Bruno Vitor, nascido dia 05 de janeiro, é um talentoso bailarino brasileiro 
-                        que integra o corpo de dança da cantora Luísa Sonza ele foi anunciado como novo integrante do ballet 
-                        em julho de 2023. Natural de Brasília, ele se mudou para São Paulo para seguir sua carreira na 
-                        dança. Desde então, Bruno tem se destacado em apresentações ao vivo e videoclipes da artista. Ele participou de
-                        coreografias marcantes, como a da música "Sagrado Profano", sob a direção de Flávio Verne. Além disso,
-                        compartilha em suas redes sociais bastidores e ensaios da turnê, mostrando a rotina intensa e apaixonada de
-                        um dançarino profissional.
-                        Bruno também é conhecido por sua atuação como professor e coreógrafo, demonstrando versatilidade e
-                        dedicação à arte da dança. Sua trajetória com Luísa Sonza reflete não apenas seu talento, mas também o
-                        reconhecimento e valorização de seu trabalho no cenário artístico brasileiro.</p>
-                   
-                    <div style="margin: 10px; text-align: center;">
-                        <h2>Giovana</h2>
-                        <img src="https://i.pinimg.com/736x/4d/1e/27/4d1e27d8cd5c4fe90a7f6debf69b2a75.jpg" alt="Giovana" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Giovana Barreto, nascida no dia 6 de abril de 1995, é uma talentosa bailarina brasileira que integra o corpo
-                        de dança da cantora Luísa Sonza desde 2022. Carioca, ela iniciou sua carreira profissional em 2018 e,
-                        desde então, tem se destacado no cenário da dança pop nacional.
-                        Além de sua atuação com Luísa Sonza, Giovana possui um currículo extenso, tendo trabalhado com diversas
-                        artistas renomadas do pop brasileiro. Sua versatilidade e presença de palco a tornaram uma figura marcante
-                        nas apresentações ao vivo e videoclipes.
-                        Giovana também compartilha momentos de sua carreira e bastidores dos shows em suas redes sociais, como no
-                        TikTok e Instagram, onde publica vídeos de ensaios, performances e interações com fãs. Um exemplo é o vídeo
-                        em que resume seis dias de ensaios em menos de três minutos, oferecendo um vislumbre da rotina intensa dos
-                        bailarinos em turnê.
-                        Sua dedicação e paixão pela dança continuam a inspirar muitos, consolidando sua posição como uma das
-                        bailarinas mais promissoras do Brasil.</p>
-                   
-                    <div style="margin: 10px; text-align: center;">
-                        <h2>Guuitas</h2>
-                        <img src="https://i.pinimg.com/736x/06/c1/40/06c1400933db2ad8889c88f6c513325d.jpg" alt="Guuitas" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Guilherme Freitas, também conhecido como "Guuitas", é um talentoso bailarino
-                        brasileiro que integra o corpo de dança da cantora Luísa Sonza. Sua presença de palco e habilidades
-                        coreográficas contribuíram significativamente para as performances impactantes da artista.
-                        Embora informações detalhadas sobre sua trajetória profissional sejam limitadas, Guilherme é reconhecido por
-                        sua dedicação e talento na dança. Sua colaboração com Luísa Sonza destaca-se pela energia e precisão em
-                        coreografias que cativam o público.
-                        Além de suas apresentações ao vivo, Guilherme compartilha momentos de sua carreira e bastidores dos shows
-                        em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino profissional.
-                        Sua contribuição para o cenário da dança pop brasileira é notável, e sua parceria com Luísa Sonza continua a
-                        encantar o público em todo o país.</p>
-                   
-                    <div style="margin: 10px; text-align: center;">
-                        <h2>Johnn</h2>
-                        <img src="https://i.pinimg.com/736x/7b/f0/48/7bf048febb672036316cba08909826e1.jpg" alt="Johnn" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Johnn Jazz é um talentoso bailarino e artista multidisciplinar brasileiro
-                        que integra o corpo de dança da cantora Luísa Sonza. Em suas redes sociais, como o Instagram, ele se
-                        apresenta como "MULTIARTIST" e destaca sua atuação como bailarino nas equipes de Luísa Sonza e Grag Queen.  
-                        Além de suas performances nos palcos, Johnn Jazz compartilha momentos de sua carreira e bastidores dos
-                        shows em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino
-                        profissional. Sua presença de palco e habilidades coreográficas contribuíram significativamente para
-                        as performances impactantes da artista.
-                        Para acompanhar mais sobre o trabalho de Johnn Jazz, você pode segui-lo no Instagram, onde ele
-                        compartilha conteúdos relacionados à dança e à sua carreira artística.</p>
-                   
-                    <div style="margin: 10px; text-align: center;">
-                        <h2>Karina</h2>
-                        <img src= "https://i.pinimg.com/736x/96/84/82/9684821c3bfd9caeab0ab2da4b3b4a88.jpg" alt="Karina" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Karina Araújo é uma talentosa bailarina, professora e coreógrafa brasileira,
-                        com mais de 15 anos de experiência em danças urbanas. Atualmente, ela integra o corpo de dança da cantora
-                        Luísa Sonza, participando de apresentações ao vivo, videoclipes e projetos especiais da artista.
-                        Além de sua atuação com Luísa Sonza, Karina é envolvida em iniciativas como o "Workshop das Mana", onde
-                        compartilha seus conhecimentos e técnicas com outros dançarinos. Sua presença nas redes sociais,
-                        especialmente no Instagram, permite que fãs acompanhem sua rotina profissional e bastidores das performances.
-                        Karina também participou do videoclipe da música "Campo de Morango" de Luísa Sonza, lançado em 2023,
-                        ao lado de outras bailarinas como Amanda Araújo, Mariana Maciel, Milena Conde, Thais Lírio e Giovana Barreto.
-                        Sua trajetória reflete dedicação, versatilidade e paixão pela dança, consolidando sua posição como uma
-                        das profissionais de destaque no cenário da dança pop brasileira.</p>
+                    <p style="text-align: justify;">Amanda Araújo, a mais querida e a favorita da maioria dos Sonzers, Amanda Araújo iniciou 
+                    sua trajetória artística no teatro aos 7 anos, influenciada por uma prima atriz e incentivada por sua mãe, que via na 
+                    filha a oportunidade de realizar o sonho de trabalharcom arte. Com o tempo, ela passou a fazer cursos de canto, 
+                    instrumentos musicais e dança. Aos 9 anos, apaixonou-se pela dança e começou a estudar estilos como jazz, 
+                    balé contemporâneo, forró, tango e dança de salão. Aos 14 anos, conheceu o street dance, que a levou ao jazz funk,
+                    estilo que pratica atualmente. Apesar de enfrentar dificuldades financeiras e trabalhar em outras
+                    áreas, Amanda decidiu seguir sua paixão pela dança. Aos 18 anos, teve sua primeira experiência profissional
+                    com uma banda de forró, viajando em turnê. Posteriormente, trabalhou com artistas como Ludmilla, Aretuza,
+                    Lexa, e Wanessa Camargo. Em 2018, iniciou uma parceria com Luísa Sonza, participando do
+                    clipe "Devagarinho" e, desde então, atua como bailarina e assistente de coreografia da cantora e atualmente
+                    é a bailarina que está há mais tempo com a Luisa. Além dos palcos, Amanda ganhou destaque nas redes sociais,
+                    especialmente no TikTok, onde compartilha coreografias que viralizam, como a da música "Anaconda".
+                    Ela utiliza a plataforma para democratizar a dança e inspirar pessoas de todas as idades a se movimentarem,
+                    além de ananconda ela viralizou criando uma dc (coreografia) em música chamada "Bandido Gostoso" sendo seu
+                    solo nos shows da Luisa, mais também é dona de outras coreografias como por exemplo "Nu" da Anitta,
+                    "Playgroud" e "Vingancinha" ambas da Vivi Wanderley, Amanda faz aniversário no dia 29 de setembro de 1993.</p>
        
                     <div style="margin: 10px; text-align: center;">
-                        <h2>Maciel</h2>
-                        <img src="https://i.pinimg.com/736x/d2/80/86/d2808605ba5d3d0c059bd705f8c78375.jpg" alt="Maciel" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Mariana Maciel é uma talentosa bailarina, coreógrafa e professora de dança
-                        brasileira, natural do Rio de Janeiro, nasceu no dia 16 de maio em 2000. Com uma carreira sólida no cenário da dança pop, ela já trabalhou com
-                        artistas renomados como Ludmilla, Dennis DJ e Vitão. Desde 2022, Mariana integra o corpo de dança da cantora
-                        Luísa Sonza, participando de turnês, videoclipes e apresentações ao vivo.
-                        Em outubro de 2023, Mariana ganhou destaque na mídia após ser flagrada aos beijos com Luísa Sonza em uma
-                        balada em São Paulo. Além de sua atuação com Luísa, Mariana também é conhecida por seu relacionamento anterior
-                        com Ohana Lefundes, bailarina de Anitta.
-                        Mariana mantém uma presença ativa nas redes sociais, especialmente no Instagram, onde compartilha momentos
-                        de sua carreira e bastidores das apresentações.</p>
+                    <h2>Bruno</h2>
+                    <img src="https://i.pinimg.com/736x/cc/8a/ca/cc8aca97d8898899ff1cc8e01462885a.jpg" alt="Bruno" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Bruno Vitor, nascido dia 05 de janeiro, é um talentoso bailarino brasileiro 
+                    que integra o corpo de dança da cantora Luísa Sonza ele foi anunciado como novo integrante do ballet 
+                    em julho de 2023. Natural de Brasília, ele se mudou para São Paulo para seguir sua carreira na dança. 
+                    Desde então, Bruno tem se destacado em apresentações ao vivo e videoclipes da artista. Ele participou de
+                    coreografias marcantes, como a da música "Sagrado Profano", sob a direção de Flávio Verne. Além disso,
+                    compartilha em suas redes sociais bastidores e ensaios da turnê, mostrando a rotina intensa e apaixonada de
+                    um dançarino profissional. Bruno também é conhecido por sua atuação como professor e coreógrafo, 
+                    demonstrando versatilidade e dedicação à arte da dança. Sua trajetória com Luísa Sonza reflete não apenas seu
+                    talento, mas também o reconhecimento e valorização de seu trabalho no cenário artístico brasileiro.</p>
                    
                     <div style="margin: 10px; text-align: center;">
-                        <h2>Milena</h2>
-                        <img src="https://i.pinimg.com/736x/fe/13/5d/fe135df3f43a79ae8172dd455e8ed1e9.jpg" alt="Milena " style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Milena Conde, nascida no dia 21 de janeiro de 1998, é uma talentosa bailarina e coreógrafa brasileira que integra o
-                        corpo de dança da cantora Luísa Sonza. Natural de Brasília, Milena se mudou para São Paulo para expandir
-                        sua carreira na dança.
-                        Com uma sólida formação em danças urbanas, Milena já colaborou com diversos artistas renomados e
-                        participou de videoclipes e apresentações ao vivo. Entre seus trabalhos de destaque está a participação no
-                        videoclipe oficial da música "FAMA", de Pedro Sampaio e Luísa Sonza, lançado em 2023, onde atuou ao lado de
-                        outros bailarinos como Amanda Araújo, Bruno Vitor, Giovana Barreto, entre outros.
-                        Além de suas performances, Milena compartilha regularmente vídeos de dança e bastidores de ensaios em suas
-                        redes sociais, como no Instagram e TikTok, proporcionando aos fãs um vislumbre de sua rotina artística.
-                        Sua dedicação e versatilidade na dança continuam a consolidar sua posição como uma das profissionais em
-                        ascensão no cenário da dança pop brasileira, e faz aniversário no dia 21 de Janeiro de 1998</p>
+                    <h2>Giovana</h2>
+                    <img src="https://i.pinimg.com/736x/4d/1e/27/4d1e27d8cd5c4fe90a7f6debf69b2a75.jpg" alt="Giovana" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Giovana Barreto, nascida no dia 6 de abril de 1995, é uma talentosa bailarina brasileira 
+                    que integra o corpo de dança da cantora Luísa Sonza desde 2022. Carioca, ela iniciou sua carreira profissional em 2018 e,
+                    desde então, tem se destacado no cenário da dança pop nacional. Além de sua atuação com Luísa Sonza, Giovana possui 
+                    um currículo extenso, tendo trabalhado com diversas artistas renomadas do pop brasileiro. Sua versatilidade e presença
+                    de palco a tornaram uma figura marcante nas apresentações ao vivo e videoclipes. Giovana também compartilha momentos 
+                    de sua carreira e bastidores dos shows em suas redes sociais, como no TikTok e Instagram, onde publica vídeos de ensaios, 
+                    performances e interações com fãs. Um exemplo é o vídeo em que resume seis dias de ensaios em menos de três minutos, 
+                    oferecendo um vislumbre da rotina intensa dos bailarinos em turnê. Sua dedicação e paixão pela dança continuam a 
+                    inspirar muitos, consolidando sua posição como uma das bailarinas mais promissoras do Brasil.</p>
                    
                     <div style="margin: 10px; text-align: center;">
-                        <h2>PH</h2>
-                        <img src="https://i.pinimg.com/736x/b1/67/f9/b167f93dee5e25c1c507150903712c20.jpg" alt="PH" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Pedro Henrique Martins, conhecido artisticamente como PH Martins, é um
-                        renomado bailarino, coreógrafo e professor brasileiro que integra o corpo de dança da cantora Luísa Sonza.
-                        Com um estilo único e carisma marcante, PH tem se destacado por sua energia e presença de palco, contribuindo
-                        significativamente para as performances da artista.
-                        Com sólida formação em danças urbanas, PH Martins já colaborou com diversos artistas renomados e participou
-                        de videoclipes e apresentações ao vivo. Entre seus trabalhos de destaque está a participação no videoclipe
-                        oficial da música "FAMA", de Pedro Sampaio e Luísa Sonza, lançado em 2023, onde atuou ao lado de outros
-                        bailarinos como Amanda Araújo, Bruno Vitor, Giovana Barreto, entre outros.
-                        PH Martins compartilha momentos de sua carreira e bastidores dos shows em suas redes sociais, proporcionando
-                        aos fãs um vislumbre de sua rotina como dançarino profissional. Em seu perfil no Instagram, ele publica
-                        vídeos de ensaios, performances e interações com fãs.
-                        Para conhecer mais sobre o trabalho de PH Martins, você pode assistir ao seguinte vídeo que mostra um
-                        momento dele com Luísa Sonza:
-                        Sua dedicação e paixão pela dança continuam a inspirar muitos, consolidando sua posição como um dos
-                        bailarinos mais promissores do Brasil.</p>
+                    <h2>Guuitas</h2>
+                    <img src="https://i.pinimg.com/736x/06/c1/40/06c1400933db2ad8889c88f6c513325d.jpg" alt="Guuitas" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Guilherme Freitas, também conhecido como "Guuitas", é um talentoso bailarino
+                    brasileiro que integra o corpo de dança da cantora Luísa Sonza. Sua presença de palco e habilidades
+                    coreográficas contribuíram significativamente para as performances impactantes da artista.
+                    Embora informações detalhadas sobre sua trajetória profissional sejam limitadas, Guilherme é reconhecido por
+                    sua dedicação e talento na dança. Sua colaboração com Luísa Sonza destaca-se pela energia e precisão em
+                    coreografias que cativam o público.
+                    Além de suas apresentações ao vivo, Guilherme compartilha momentos de sua carreira e bastidores dos shows
+                    em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino profissional.
+                    Sua contribuição para o cenário da dança pop brasileira é notável, e sua parceria com Luísa Sonza continua a
+                    encantar o público em todo o país.</p>
+                   
+                    <div style="margin: 10px; text-align: center;">
+                    <h2>Johnn</h2>
+                    <img src="https://i.pinimg.com/736x/7b/f0/48/7bf048febb672036316cba08909826e1.jpg" alt="Johnn" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Johnn Jazz é um talentoso bailarino e artista multidisciplinar brasileiro
+                    que integra o corpo de dança da cantora Luísa Sonza. Em suas redes sociais, como o Instagram, ele se
+                    apresenta como "MULTIARTIST" e destaca sua atuação como bailarino nas equipes de Luísa Sonza e Grag Queen.  
+                    Além de suas performances nos palcos, Johnn Jazz compartilha momentos de sua carreira e bastidores dos
+                    shows em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino
+                    profissional. Sua presença de palco e habilidades coreográficas contribuíram significativamente para
+                    as performances impactantes da artista.
+                    Para acompanhar mais sobre o trabalho de Johnn Jazz, você pode segui-lo no Instagram, onde ele
+                    compartilha conteúdos relacionados à dança e à sua carreira artística.</p>
+                   
+                    <div style="margin: 10px; text-align: center;">
+                    <h2>Karina</h2>
+                    <img src= "https://i.pinimg.com/736x/96/84/82/9684821c3bfd9caeab0ab2da4b3b4a88.jpg" alt="Karina" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Karina Araújo é uma talentosa bailarina, professora e coreógrafa brasileira,
+                    com mais de 15 anos de experiência em danças urbanas. Atualmente, ela integra o corpo de dança da cantora
+                    Luísa Sonza, participando de apresentações ao vivo, videoclipes e projetos especiais da artista.
+                    Além de sua atuação com Luísa Sonza, Karina é envolvida em iniciativas como o "Workshop das Mana", onde
+                    compartilha seus conhecimentos e técnicas com outros dançarinos. Sua presença nas redes sociais,
+                    especialmente no Instagram, permite que fãs acompanhem sua rotina profissional e bastidores das performances.
+                    Karina também participou do videoclipe da música "Campo de Morango" de Luísa Sonza, lançado em 2023,
+                    ao lado de outras bailarinas como Amanda Araújo, Mariana Maciel, Milena Conde, Thais Lírio e Giovana Barreto.
+                    Sua trajetória reflete dedicação, versatilidade e paixão pela dança, consolidando sua posição como uma
+                    das profissionais de destaque no cenário da dança pop brasileira.</p>
+       
+                    <div style="margin: 10px; text-align: center;">
+                    <h2>Maciel</h2>
+                    <img src="https://i.pinimg.com/736x/d2/80/86/d2808605ba5d3d0c059bd705f8c78375.jpg" alt="Maciel" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Mariana Maciel é uma talentosa bailarina, coreógrafa e professora de dança
+                    brasileira, natural do Rio de Janeiro, nasceu no dia 16 de maio em 2000. Com uma carreira sólida no cenário da dança pop, ela já 
+                    trabalhou com artistas renomados como Ludmilla, Dennis DJ e Vitão. Desde 2022, Mariana integra o corpo de dança da cantora
+                    Luísa Sonza, participando de turnês, videoclipes e apresentações ao vivo.
+                    Em outubro de 2023, Mariana ganhou destaque na mídia após ser flagrada aos beijos com Luísa Sonza em uma
+                    balada em São Paulo. Além de sua atuação com Luísa, Mariana também é conhecida por seu relacionamento anterior
+                    com Ohana Lefundes, bailarina de Anitta.
+                    Mariana mantém uma presença ativa nas redes sociais, especialmente no Instagram, onde compartilha momentos
+                    de sua carreira e bastidores das apresentações.</p>
+                   
+                    <div style="margin: 10px; text-align: center;">
+                    <h2>Milena</h2>
+                    <img src="https://i.pinimg.com/736x/fe/13/5d/fe135df3f43a79ae8172dd455e8ed1e9.jpg" alt="Milena " style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Milena Conde, nascida no dia 21 de janeiro de 1998, é uma talentosa bailarina 
+                    e coreógrafa brasileira que integra o corpo de dança da cantora Luísa Sonza. Natural de Brasília, Milena se mudou
+                    para São Paulo para expandir sua carreira na dança. Com uma sólida formação em danças urbanas, Milena já colaborou com
+                    diversos artistas renomados e participou de videoclipes e apresentações ao vivo. Entre seus trabalhos de destaque 
+                    está a participação no videoclipe oficial da música "FAMA", de Pedro Sampaio e Luísa Sonza, lançado em 2023, onde 
+                    atuou ao lado de outros bailarinos como Amanda Araújo, Bruno Vitor, Giovana Barreto, entre outros.
+                    Além de suas performances, Milena compartilha regularmente vídeos de dança e bastidores de ensaios em suas
+                    redes sociais, como no Instagram e TikTok, proporcionando aos fãs um vislumbre de sua rotina artística.
+                    Sua dedicação e versatilidade na dança continuam a consolidar sua posição como uma das profissionais em
+                    ascensão no cenário da dança pop brasileira.</p>
+                   
+                    <div style="margin: 10px; text-align: center;">
+                    <h2>PH</h2>
+                    <img src="https://i.pinimg.com/736x/b1/67/f9/b167f93dee5e25c1c507150903712c20.jpg" alt="PH" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Pedro Henrique Martins, conhecido artisticamente como PH Martins, é um
+                    renomado bailarino, coreógrafo e professor brasileiro que integra o corpo de dança da cantora Luísa Sonza.
+                    Com um estilo único e carisma marcante, PH tem se destacado por sua energia e presença de palco, contribuindo
+                    significativamente para as performances da artista. Com sólida formação em danças urbanas, PH Martins já 
+                    colaborou com diversos artistas renomados e participoude videoclipes e apresentações ao vivo. Entre seus trabalhos
+                    de destaque está a participação no videoclipe oficial da música "FAMA", de Pedro Sampaio e Luísa Sonza, lançado em 2023,
+                    onde atuou ao lado de outros bailarinos como Amanda Araújo, Bruno Vitor, Giovana Barreto, entre outros.
+                    PH Martins compartilha momentos de sua carreira e bastidores dos shows em suas redes sociais, proporcionando
+                    aos fãs um vislumbre de sua rotina como dançarino profissional. Em seu perfil no Instagram, ele publica
+                    vídeos de ensaios, performances e interações com fãs.
+                    Para conhecer mais sobre o trabalho de PH Martins, você pode assistir ao seguinte vídeo que mostra um
+                    momento dele com Luísa Sonza. Sua dedicação e paixão pela dança continuam a inspirar muitos, consolidando 
+                    sua posição como um dos bailarinos mais promissores do Brasil.</p>
                    
                     <div style="margin: 10px; text-align: center;"></div>
-                        <h2>Renan</h2>
-                        <img src="https://i.pinimg.com/736x/cb/c2/c9/cbc2c91922247adf1bce32569cf9f3b3.jpg" alt="Renan" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Renan Silveira é um talentoso bailarino, coreógrafo e professor brasileiro que integra
-                        o corpo de dança da cantora Luísa Sonza. Com uma carreira marcada por versatilidade e expressividade, Renan
-                        tem se destacado por sua presença de palco e contribuições criativas nas performances da artista.
-                        Além de suas apresentações ao vivo, Renan compartilha momentos de sua carreira e bastidores dos shows em
-                        suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino profissional. Em seu
-                        perfil no Instagram, ele publica vídeos de ensaios, performances e interações com fãs.
-                        Em 2023, Renan foi vítima de um ataque homofóbico enquanto gravava um vídeo caracterizado como drag queen
-                        em seu condomínio. O incidente, que ocorreu durante o mês do orgulho LGBTQIA+, foi amplamente divulgado,
-                        e Renan utilizou suas redes sociais para denunciar o ocorrido e reforçar a importância da liberdade de
-                        expressão e do combate à discriminação.
-                        Para conhecer mais sobre o trabalho de Renan Silveira, você pode assistir ao seguinte vídeo que mostra um
-                        momento dele com Luísa Sonza</p>
+                    <h2>Renan</h2>
+                    <img src="https://i.pinimg.com/736x/cb/c2/c9/cbc2c91922247adf1bce32569cf9f3b3.jpg" alt="Renan" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Renan Silveira, nascido dia 26 de abril, é um talentoso bailarino, coreógrafo e 
+                    professor brasileiro que integra o corpo de dança da cantora Luísa Sonza. Com uma carreira marcada por 
+                    versatilidade e expressividade, Renan tem se destacado por sua presença de palco e contribuições criativas
+                    nas performances da artista. Além de suas apresentações ao vivo, Renan compartilha momentos de sua carreira
+                    e bastidores dos shows em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como 
+                    dançarino profissional. Em seu perfil no Instagram, ele publica vídeos de ensaios, performances e interações com fãs.
+                    Em 2023, Renan foi vítima de um ataque homofóbico enquanto gravava um vídeo caracterizado como drag queen
+                    em seu condomínio. O incidente, que ocorreu durante o mês do orgulho LGBTQIA+, foi amplamente divulgado,
+                    e Renan utilizou suas redes sociais para denunciar o ocorrido e reforçar a importância da liberdade de
+                    expressão e do combate à discriminação.</p>
                        
                     <div style="margin: 10px; text-align: center;">
-                        <h2>Thais</h2>
-                        <img src="https://i.pinimg.com/736x/be/07/f5/be07f528d8229603975f60a13d5d698b.jpg" alt="Thais" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Thais Lírio é uma talentosa bailarina, coreógrafa e professora de dança brasileira
-                        que integra o corpo de dança da cantora Luísa Sonza. Com uma carreira marcada por versatilidade e
-                        expressividade, Thais tem se destacado por sua presença de palco e contribuições criativas nas performances
-                        da artista.
-                        Além de suas apresentações ao vivo, Thais compartilha momentos de sua carreira e bastidores dos shows em
-                        suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarina profissional. Em seu
-                        perfil no Instagram, ela publica vídeos de ensaios, performances e interações com fãs.
-                        Em 2023, Thais participou do videoclipe da música "Campo de Morango" de Luísa Sonza, lançado em 2023,
-                        ao lado de outras bailarinas como Amanda Araújo, Mariana Maciel, Milena Conde e Giovana Barreto.
-                        Sua contribuição para o cenário da dança pop brasileira é notável, e sua parceria com Luísa Sonza continua a encantar o público em todo o país.
-                        Para conhecer mais sobre o trabalho de Thais Lírio, você pode acompanhar seus vídeos no TikTok e no
-                        Instagram, onde ela compartilha conteúdos relacionados à dança e à sua carreira artística.</p>
+                    <h2>Thais</h2>
+                    <img src="https://i.pinimg.com/736x/be/07/f5/be07f528d8229603975f60a13d5d698b.jpg" alt="Thais" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Thais Lírio é uma talentosa bailarina, coreógrafa e professora de dança brasileira
+                    que integra o corpo de dança da cantora Luísa Sonza. Com uma carreira marcada por versatilidade e
+                    expressividade, Thais tem se destacado por sua presença de palco e contribuições criativas nas performances
+                    da artista. Além de suas apresentações ao vivo, Thais compartilha momentos de sua carreira e bastidores dos shows em
+                    suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarina profissional. Em seu
+                    perfil no Instagram, ela publica vídeos de ensaios, performances e interações com fãs.
+                    Em 2023, Thais participou do videoclipe da música "Campo de Morango" de Luísa Sonza, lançado em 2023,
+                    ao lado de outras bailarinas como Amanda Araújo, Mariana Maciel, Milena Conde e Giovana Barreto.
+                    Sua contribuição para o cenário da dança pop brasileira é notável, e sua parceria com Luísa Sonza
+                    continua a encantar o público em todo o país. Para conhecer mais sobre o trabalho de Thais Lírio, 
+                    você pode acompanhar seus vídeos no TikTok e no Instagram, onde ela compartilha conteúdos relacionados à 
+                    dança e à sua carreira artística.</p>
                        
                     <div style="margin: 10px; text-align: center;">
-                        <h2>Vini</h2>
-                        <img src="https://i.pinimg.com/736x/45/8f/aa/458faa61d7e4769f39929d2ed07a6cbf.jpg" alt="Vini" style="width: 20%; margin: 10px auto; display: block;">
-                        <p style="text-align: justify;">Vinicius Mello, conhecido artisticamente como Vini, é um talentoso
-                        bailarino, coreógrafo e professor brasileiro que integra o corpo de dança da cantora Luísa Sonza.
-                        Com uma carreira marcada por versatilidade e expressividade, Vini tem se destacado por sua presença de
-                        palco e contribuições criativas nas performances da artista.
-                        Além de suas apresentações ao vivo, Vini compartilha momentos de sua carreira e bastidores dos shows
-                        em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino profissional.
-                        Em seu perfil no Instagram, ele publica vídeos de ensaios, performances e interações com fãs.
-                        Em 2024, Vini participou do programa "Dança dos Famosos", exibido pela TV Globo, onde demonstrou sua
-                        habilidade e carisma, conquistando o público e os jurados. Sua dedicação e paixão pela dança continuam a
-                        inspirar muitos, consolidando sua posição como um dos bailarinos mais promissores do Brasil.
-                        Para conhecer mais sobre o trabalho de Vini, você pode acompanhar seus vídeos no TikTok e no Instagram,
-                        onde ele compartilha conteúdos relacionados à dança e à sua carreira artística</p>
+                    <h2>Vini</h2>
+                    <img src="https://i.pinimg.com/736x/45/8f/aa/458faa61d7e4769f39929d2ed07a6cbf.jpg" alt="Vini" style="width: 20%; margin: 10px auto; display: block;">
+                    <p style="text-align: justify;">Vinicius Mello, conhecido artisticamente como Vini, é um talentoso
+                    bailarino, coreógrafo e professor brasileiro que integra o corpo de dança da cantora Luísa Sonza.
+                    Com uma carreira marcada por versatilidade e expressividade, Vini tem se destacado por sua presença de
+                    palco e contribuições criativas nas performances da artista.
+                    Além de suas apresentações ao vivo, Vini compartilha momentos de sua carreira e bastidores dos shows
+                    em suas redes sociais, proporcionando aos fãs um vislumbre de sua rotina como dançarino profissional.
+                    Em seu perfil no Instagram, ele publica vídeos de ensaios, performances e interações com fãs.
+                    Em 2024, Vini participou do programa "Dança dos Famosos", exibido pela TV Globo, onde demonstrou sua
+                    habilidade e carisma, conquistando o público e os jurados. Sua dedicação e paixão pela dança continuam a
+                    inspirar muitos, consolidando sua posição como um dos bailarinos mais promissores do Brasil.
+                    Para conhecer mais sobre o trabalho de Vini, você pode acompanhar seus vídeos no TikTok e no Instagram,
+                    onde ele compartilha conteúdos relacionados à dança e à sua carreira artística</p>
         </section>
     </section>
     <section id="carteirinha">
@@ -640,8 +556,8 @@ input {
             </p>
             <div style="text-align: center; margin-top: 20px;">
                 <p>Para acompanhar mais de perto a Luísa Sonza, siga ela nas redes sociais:</p>
-                <button style="margin: 5px;" onclick="window.open('https://www.instagram.com/luisasonza/', '_blank')">Siga a Luísa no Instagram</button>
-                <button style="margin: 5px;" onclick="window.open('https://www.tiktok.com/@luisasonza', '_blank')">Siga a Luísa no TikTok</button>
+                <button style="color:#6a1b9a;" margin: 5px; onclick="window.open('https://www.instagram.com/luisasonza/', '_blank')">Siga a Luísa no Instagram</button>
+                <button style="color:#6a1b9a;" margin: 5px; onclick="window.open('https://www.tiktok.com/@luisasonza', '_blank')">Siga a Luísa no TikTok</button>
               </div>
                 </a>
             </div>
