@@ -27,6 +27,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -96,6 +97,7 @@ section img {
     width: 90vw;
   }
 }
+
 section h1, section h2 {
   text-align: center;
 }
@@ -146,12 +148,18 @@ section p {
 #result {
   text-align: center;
   display: none;
-  margin-top: 20px;
+  #margin-top: 20px;
 }
 
 #result img {
   width: 50%;
   border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    font-size: 14px;
+  }
 }
 </style>
 </head>
