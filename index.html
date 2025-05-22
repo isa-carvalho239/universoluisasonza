@@ -161,6 +161,75 @@ section p {
   nav ul {
     font-size: 14px;
   }
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fdf6ff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#quiz-screen h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#options label {
+  font-size: 16px;
+  background-color: #eee6f3;
+  padding: 12px 16px;
+  border-radius: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#options label:hover {
+  background-color: #d3b5ec;
+}
+
+#options input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a148c;
+}
+
+#feedback {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #6a1b9a;
+  font-size: 18px;
+}
 }
 </style>
 </head>
@@ -174,6 +243,7 @@ section p {
                 <li><a href="#show">Show</a></li>
                 <li><a href="#ballet">Ballet</a></li>
                 <li><a href="#carteirinha">Carteirinha</a></li>
+                <li><a href="#quiz">Quiz</a></li>
             </ul>
         </nav>
     </header>
@@ -740,11 +810,125 @@ section p {
                 document.getElementById('result').style.display = 'block';
             }
         });
+    </script>
+        <section id="quiz">
+            <h1>Quiz da Luisa Sonza</h1>
+    <div id="start-screen">
+      <h1>Bem-vindo ao Quiz Luísa Sonza</h1>
+      <a href="#" onclick="return false;"><img src="https://i.pinimg.com/736x/79/b9/ce/79b9ceac6896bff99de4113f70fb145c.jpg" alt="Luísa Sonza"></a>
+      <p>Você se considera um fã de verdade da Luísa Sonza? Então chegou a hora de mostrar que está
+        por dentro de tudo! Neste quiz, vamos testar seus conhecimentos sobre a carreira, as músicas, 
+        os clipes, os shows e os momentos marcantes da vida dessa artista que conquistou o Brasil com
+        sua voz, atitude e autenticidade. Seja você um fã recente ou alguém que acompanha desde os primeiros
+        passos, esse desafio é para todos que vibram com cada lançamento e performance da nossa Rainha do Pop. 
+        Responda com atenção, relembre momentos icônicos e descubra em qual nível de fã você está. 
+        Pronta(o) para brilhar?</p>
+      <button onclick="startQuiz()">Iniciar o Quiz</button>
+    </div>
 
-        window.onload = function() {
+    <div id="quiz-screen" class="hidden">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button onclick="submitAnswer()">Enviar</button>
+      <p id="feedback"></p>
+    </div>
+
+    <div id="result-screen" class="hidden">
+      <h2>Resultado Final</h2>
+      <p id="score"></p>
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script>
+    const questions =  [
+    { q: "Qual o nome completo da Luísa Sonza?", options: ["Luísa Sonza Gerloff", "Luísa  Gerloff Silva Sonza", "Luísa Gerloff Sonza"], answer: 2},
+    { q: "Em que cidade Luísa Sonza nasceu?", options: ["Lajeado, Rio Grande do Sul", "Tuparendi, Rio Grande do Sul", "Porto Alegre, Rio Grande do Sul"], answer: 1 },
+    { q: "Qual o nome da mãe e do pai da Luísa Sonza?", options: ["Maria (mãe) e João (pai)", "Eliane (mãe) e Cézar (pai)", "Luciana (mãe) e Marcos (pai)"], answer: 1 },
+    { q: "Qual é o nome da irmã mais nova da Luísa Sonza?", options: ["Laura", "Não tem irmã", "Bianca", "Sofia"], answer: 3 },
+    { q: "Quantos anos a Luísa começou a cantar, e qual foi a banda?", options: ["6 anos, na banda Som Maior", "7 anos, na banda Sol Maior", "8 anos, na banda Canta Mais"], answer: 1 },
+    { q: "Antes de virar cantora profissional, em qual plataforma Luísa Sonza começou a ganhar destaque com vídeos de covers?", options: ["Youtube", "TikTok", "Instagram"], answer: 0 },
+    { q: "Qual foi a primeira música autoral da Luísa?", options: ["Good Vibes", "Braba", "Devagarinho"], answer: 0 },
+    { q: "Qual música deu destaque nacional à Luísa Sonza, mas hoje ela afirma que não lançaria novamente?", options: ["Modo Turbo", "Braba", "Devagarinho", "Rebolar"], answer: 3 },
+    { q: "Qual música Luísa Sonza compôs em homenagem ao humorista Whindersson Nunes?", options: ["Melhor Sozinha", "Penhasco", "Olhos Castanhos"], answer: 2 },
+    { q: "Após o término com Whindersson Nunes, Luísa Sonza enfrentou uma onda intensa de ataques virtuais. Quais foram algumas das consequências que ela revelou ter sofrido?", options: ["Ansiedade, depressão e crises de pânico", "Síndrome do pânico e insônia", "Medo de cantar e problemas vocais"], answer: 0 },
+    { q: "Qual foi o principal tema social evidenciado durante o relacionamento de Luísa Sonza com Vitão?", options: ["Machismo", "Preconceito regional", "Intolerância religiosa"], answer: 0 },
+    { q: "Luísa declarou que o álbum Doce 22 foi dividido em dois lados. Qual é a principal diferença entre os lados ‘A’ e ‘B’?", options: ["Lado A é romântico, lado B é dançante", "Lado A é mais ousado, lado B é introspectivo", "Lado A é internacional, lado B é nacional", "Lado A é dançante e animado, lado B é sensível, confessional e vulnerável"], answer: 3 },
+    { q: "Luísa Sonza fez um pronunciamento ao vivo sobre o fim de seu relacionamento em qual programa?", options: ["Fantástico", "Mais Você, Ana Maria Braga", "Encontro com Patrícia Poeta"], answer: 1 },
+    { q: "O álbum Escândalo Íntimo foi anunciado de forma inusitada. Qual método ela usou?", options: ["Outdoor na Rodovia Régis Bittencourt", "Anúncio no Fantástico", "Vídeo no TikTok"], answer: 0 },
+    { q: "Qual o nome do documentário da Luísa com a Netflix?", options: ["Por Trás da Voz", "Luísa em Cena", "Se Eu Fosse Luísa Sonza"], answer: 2 },
+    { q: "Qual o apelido do balé da Luísa Sonza?", options: ["Ballet da Luísa", "Sonza Dance Crew", "Creche da Sonza"], answer: 2 },
+    { q: "Qual dos bailarinos é o favorito da maioria dos sonzers?", options: ["Amanda Araújo", "Giovana Barreto", "Milena Conde"], answer: 0 },
+    { q: "Quais as datas de início das turnês DOCE22 e Escândalo Íntimo?", options: ["5 de março de 2022 e 20 de outubro de 2023", "15 de março de 2022 e 15 de outubro de 2023", "10 de março de 2022 e 25 de outubro de 2023"], answer: 2 },
+    { q: "Qual a música mais tocada de Doce22?", options: ["Penhasco", "Melhor Sozinha", "Intere$$eira"], answer: 0 },
+    { q: "Qual a música mais tocada de Escândalo Íntimo?", options: ["Luísa Manequim", "Campo de Morango", "Penhasco2"], answer: 2 }
+  ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function startQuiz() {
+      document.getElementById('start-screen').classList.add('hidden');
+      document.getElementById('quiz-screen').classList.remove('hidden');
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById('question').textContent = q.q;
+      const optionsDiv = document.getElementById('options');
+      optionsDiv.innerHTML = '';
+      q.options.forEach((opt, index) => {
+        optionsDiv.innerHTML += `<label><input type="radio" name="option" value="${index}"> ${opt}</label><br>`;
+      });
+      document.getElementById('feedback').textContent = '';
+    }
+
+    function submitAnswer() {
+      const selected = document.querySelector('input[name="option"]:checked');
+      if (!selected) return alert("Por favor, escolha uma resposta.");
+
+      const answer = parseInt(selected.value);
+      if (answer === questions[currentQuestion].answer) {
+        score++;
+        document.getElementById('feedback').textContent = "Acertou!";
+      } else {
+        document.getElementById('feedback').textContent = "Errou!";
+      }
+
+      currentQuestion++;
+      setTimeout(() => {
+        if (currentQuestion < questions.length) {
+          showQuestion();
+        } else {
+          showResult();
+        }
+      }, 1000);
+    }
+
+   function showResult() {
+  document.getElementById('quiz-screen').classList.add('hidden');
+  document.getElementById('result-screen').classList.remove('hidden');
+  document.getElementById('score').textContent = `Você acertou ${score} de ${questions.length} perguntas.`;
+
+  let message = '';
+  if (score <= 5) {
+    message = 'Fã Nutella<br><br>Todo mundo começa de algum lugar! Que tal tentar novamente e mostrar que você pode ser uma verdadeira especialista em Luísa Sonza?';
+  } else if (score <= 10) {
+    message = 'Conhecedor(a) da Luísa Sonza<br><br>Você já sabe bastante coisa, mas ainda dá pra brilhar mais! Continue acompanhando cada passo da Luísa e tente outra vez!';
+  } else if (score <= 15) {
+    message = 'Fã Premium<br><br>Uau! Você manda muito bem e conhece muito da carreira da Luísa! Só mais um pouquinho e você chega ao nível máximo. Orgulho de fã!';
+  } else {
+    message = 'Fã da Rainha do POP<br><br>Você é simplesmente impecável! Um verdadeiro especialista, daqueles que acompanham desde os primeiros passos. Luísa teria orgulho de você!';
+  }
+
+  document.getElementById('message').innerHTML = `<strong>${message}</strong>`;
+}
+    
+    window.onload = function() {
     window.location.hash = 'introducao';
     };
-    </script>
+
+  </script>
 </body>
 </html>
-
